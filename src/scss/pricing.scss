@@ -1,0 +1,50 @@
+@import "./globle";
+.pricing {
+  @include container();
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: $gap;
+  //background: red;
+  .card {
+    background: transparent;
+    height: 460px;
+    background: lighten($black, 2%);
+    display: flex;
+    flex-direction: column;
+    gap: $gap*1.1;
+    padding: $gap*2;
+    justify-content: center;
+    align-items: center;
+    .price_title{
+        font-weight: 600;
+        color: $main;
+        font-size: 18px;
+        margin-bottom: $gap*1.5;
+    }
+    .price{
+        font-weight: 900;
+        color: $white;
+        font-size: 33px;
+        text-transform: uppercase;
+    }
+    .price_title_2{
+        font-weight: 600;
+        color: $white;
+        font-size: 20px;
+    }
+    p{
+        text-align: center;
+        color: rgba($white, 0.7);
+    }
+    button{
+        @extend %btn;
+        background: $main;
+        text-transform: capitalize;
+        padding: 8px 16px;
+    }
+    .line{
+        @extend %line;
+    }
+  }
+}

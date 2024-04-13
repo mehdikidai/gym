@@ -21,9 +21,9 @@ function AboutUs() {
           ad hic.
         </p>
         <ul>
-          <li><i class="material-symbols-outlined">check</i>Lorem, ipsum dolor.</li>
-          <li><i class="material-symbols-outlined">check</i>Lorem, ipsum dolor.</li>
-          <li><i class="material-symbols-outlined">check</i>Lorem, ipsum dolor.</li>
+          <li><i className="material-symbols-outlined">check</i>Lorem, ipsum dolor.</li>
+          <li><i className="material-symbols-outlined">check</i>Lorem, ipsum dolor.</li>
+          <li><i className="material-symbols-outlined">check</i>Lorem, ipsum dolor.</li>
           
         </ul>
       </div>
