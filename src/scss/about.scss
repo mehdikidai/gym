@@ -1,0 +1,87 @@
+@import './globle';
+.AboutAs{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    @include container();
+    gap: $gap * 2;
+    .box{
+       aspect-ratio: 1;
+       //background: red;
+       &_1{
+        position: relative;
+        img{
+            width: calc(100% - 30px);
+            height: calc(100% - 30px);
+            object-fit: cover;
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            box-shadow: -30px -30px $main;
+        }
+       }
+       &_2{
+        display: flex;
+        flex-direction: column;
+        gap: $gap ;
+        .title_about{
+            display: flex;
+            align-items: end;
+            gap: $gap;
+          h2{
+            color: $white;
+          }
+          span{
+            width: 40px;
+            height: 2px;
+            background: $main;
+            transform: translateY(-5px);
+          }
+        }
+        h3{
+            font-size: 40px;
+            color: $white;
+            span{
+                color: $main;
+            }
+        }
+        p{
+            color: $white;
+            line-height: 1.6;
+            font-size: 16px;
+        }
+        ul{
+            display: flex;
+            flex-direction: column;
+            gap: $gap;
+            margin-top: 40px;
+            li{
+                color: $white;
+                display: flex;
+                align-items: center;
+                gap: $gap;
+                i{
+                    color: $green;
+                }
+            }
+        }
+       }
+
+    }
+}
+
+@include respond("phone") {
+    .AboutAs {
+        display: grid;
+        grid-template-columns: 1fr;
+        width: 100%;
+        max-width: 1200px;
+        padding-inline: 0;
+        margin: 0 auto;
+        gap: 40px;
+        padding-inline: $gap;
+        .box_2{
+            //background: red;
+            padding-block: $gap;
+        }
+    }
+  }

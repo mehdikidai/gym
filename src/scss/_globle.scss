@@ -1,0 +1,45 @@
+@import './colors';
+@import './sizes';
+
+@mixin respond($breakpoint) {
+  @if ($breakpoint == "desktop") {
+    @media (max-width: 1200px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == "desktop") {
+    @media (max-width: 900px) {
+      @content;
+    }
+  }
+  @if ($breakpoint == "phone") {
+    @media (max-width: 600px) {
+      @content;
+    }
+  }
+}
+
+%btn{
+  padding: 4px 16px;
+  border: none;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 33px;
+  color: $white;
+}
+
+%flex_c {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@mixin container($padding:0) {
+
+  width: 100%;
+  max-width: 1200px;
+  padding-inline: $padding;
+  margin: 0 auto;
+
+}
