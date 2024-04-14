@@ -1,6 +1,10 @@
 import React from "react";
 import "../scss/cover.scss";
 import Nav from "./Nav";
+import Facebook from "../icons/Facebook";
+import Twitter from "../icons/Twitter";
+import Iinstagram from "../icons/Iinstagram";
+import { Loading } from "../icons/Loading";
 
 function Cover() {
 
@@ -13,6 +17,17 @@ function Cover() {
   }
   return (
     <div className="photo">
+      <div className="social_media">
+        <a href="#">
+          <Facebook w={24}/>
+        </a>
+        <a href="#">
+          <Twitter w={24}/>
+        </a>
+        <a href="#">
+          <Iinstagram w={24}/>
+        </a>
+      </div>
       <div className="container">
         <Nav />
         <h1>
@@ -27,7 +42,9 @@ function Cover() {
           click here
           <i className="material-symbols-outlined">chevron_right</i>
         </button>
+        
       </div>
+      
     </div>
   );
 }

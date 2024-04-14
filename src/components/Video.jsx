@@ -1,10 +1,20 @@
-import React from "react";
+import React, { useState } from "react";
 import "./../scss/video.scss";
 import PhotoVideo from "../images/video.jpg";
+import toast, { Toaster } from "react-hot-toast";
+import ModelVideo from "./ModelVideo";
 
 function Video() {
+
+  const [showVideo,setShowVideo] = useState(false)
+
+  const toggleVideo = () => {
+    setShowVideo(last=>last=!last)
+  }
+  
   return (
     <div className="video">
+
       <img src={PhotoVideo} alt="v" />
       <div className="box_video">
         <h2>Lorem, ipsum.</h2>
@@ -12,10 +22,17 @@ function Video() {
         <h3>
           Lorem <span className="span_h3">ipsum</span>
         </h3>
-        <button className="btn_play">
+        <button onClick={toggleVideo} className="btn_play">
           <i className="material-symbols-outlined">play_arrow</i>
         </button>
       </div>
+
+      {
+        showVideo &&  <ModelVideo toggleVideo={toggleVideo}/>
+      }
+
+     
+      
     </div>
   );
 }

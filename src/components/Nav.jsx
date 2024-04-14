@@ -7,10 +7,10 @@ function Nav() {
     <div className='nav'>
         <button><img width={120} src={Logo}/></button>
         <ul className='nav_ul'>
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Blog</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#"><span></span>Home</a></li>
+            <li><a href="#"><span></span>About</a></li>
+            <li><a href="#"><span></span>Blog</a></li>
+            <li><a href="#"><span></span>Contact</a></li>
         </ul>
     </div>
   )

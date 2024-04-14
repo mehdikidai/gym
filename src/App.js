@@ -1,7 +1,10 @@
 import './App.scss';
+
+//import { useSelector } from 'react-redux';
+
 import AboutUs from './components/AboutUs';
 import Comments from './components/Comments';
-//import { useSelector } from 'react-redux';
+import Contact from './components/Contact';
 import Cover from './components/Cover';
 import Pricing from './components/Pricing';
 import Service from './components/Service';
@@ -32,6 +35,8 @@ function App() {
        <Spacing/>
        <Title/>
        <Comments/>
+       <Spacing/>
+       <Contact/>
        <Spacing/>
     </div>
   );

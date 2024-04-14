@@ -12,41 +12,50 @@
     background: lighten($black, 2%);
     display: flex;
     flex-direction: column;
-    gap: $gap*1.1;
-    padding: $gap*2;
+    gap: $gap * 1.1;
+    padding: $gap * 2;
     justify-content: center;
     align-items: center;
-    clip-path: polygon(50px 0,100% 0,100% 100%,0 100%,0  50px);
-    .price_title{
-        font-weight: 600;
-        color: $main;
-        font-size: 18px;
-        margin-bottom: $gap*1.5;
+    clip-path: polygon(50px 0, 100% 0, 100% 100%, 0 100%, 0 50px);
+    .price_title {
+      font-weight: 600;
+      color: $main;
+      font-size: 18px;
+      margin-bottom: $gap * 1.5;
     }
-    .price{
-        font-weight: 900;
-        color: $white;
-        font-size: 33px;
-        text-transform: uppercase;
+    .price {
+      font-weight: 900;
+      color: $white;
+      font-size: 33px;
+      text-transform: uppercase;
     }
-    .price_title_2{
-        font-weight: 600;
-        color: $white;
-        font-size: 20px;
+    .price_title_2 {
+      font-weight: 600;
+      color: $white;
+      font-size: 20px;
     }
-    p{
-        text-align: center;
-        color: rgba($white, 0.7);
-        flex: 1;
+    p {
+      text-align: center;
+      color: rgba($white, 0.7);
+      flex: 1;
     }
-    button{
-        @extend %btn;
-        background: $main;
-        text-transform: capitalize;
-        padding: 10px 20px;
+    button {
+      @extend %btn;
+      background: $main;
+      text-transform: capitalize;
+      padding: 10px 20px;
     }
-    .line{
-        @extend %line;
+    .line {
+      @extend %line;
     }
+  }
+}
+
+@include respond("phone") {
+  .pricing {
+    //background: red;
+    @include container($gap);
+    grid-template-columns: 1fr;
+    gap: $gap;
   }
 }

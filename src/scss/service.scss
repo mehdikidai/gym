@@ -1,34 +1,56 @@
-@import './globle';
-.service{
-    //background: red;
-    @include container();
-    
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: $gap;
-    .card{
-        background: transparent;
-        height: 500px;
-        position: relative;
-        clip-path: polygon(40px 0,100% 0,100% 100%,0 100%,0  40px);
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-        .card_title{
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            font-size: 20px;
-            color: $white;
-            height: 100px;
-            width: 100%;
-            display: flex;
-            align-items: start;
-            justify-content: center;
-            padding-block: $gap;
-            background: linear-gradient(0deg, rgba(0,0,0,1) 36%, rgba(0,0,0,0.4920168751094187) 100%); 
-        }
+@import "./globle";
+.service {
+  //background: red;
+  @include container();
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: $gap;
+  .card {
+    background: transparent;
+    height: 500px;
+    position: relative;
+    clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%, 0 40px);
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
+    .card_title {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      font-size: 20px;
+      color: $white;
+      height: 70px;
+      width: 100%;
+      display: flex;
+      align-items: start;
+      justify-content: center;
+      padding-block: $gap;
+      background: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 1) 36%,
+        rgba(0, 0, 0, 0.4920168751094187) 100%
+      );
+    }
+  }
+}
+
+@include respond("ipad") {
+  .service {
+    //background: red;
+    @include container($gap);
+  }
+}
+
+@include respond("phone") {
+  .service {
+    //background: red;
+    @include container($gap);
+
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: $gap;
+  }
 }

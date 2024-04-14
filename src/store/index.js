@@ -1,6 +1,7 @@
 
 const data = {
-    name:'mehdi'
+    name:'mehdi',
+    videUrl:'https://www.youtube.com/watch?v=fCVm5U2ob8U'
 }
 
 export default (state=data, action) => {

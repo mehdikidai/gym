@@ -1,0 +1,100 @@
+@import "./globle";
+
+.contact {
+  width: 100%;
+  //height: 460px;
+  background: lighten($black, 2%);
+
+  .boxs {
+    @include container();
+    height: auto;
+    //background-color: red;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: $gap;
+    .box_one {
+      //background: blue;
+      padding-block: $gap * 4;
+      display: flex;
+      gap: $gap * 2;
+      flex-direction: column;
+      h3 {
+        color: $main;
+        font-size: 40px;
+        text-transform: uppercase;
+        span{
+            color: $white;
+        }
+      }
+      ul {
+        //background: green;
+        display: flex;
+        flex-direction: column;
+        gap: $gap / 2;
+        li {
+          display: flex;
+          align-items: center;
+          justify-content: flex-start;
+          gap: $gap / 2;
+          color: $white;
+          font-size: 14px;
+          i {
+            font-size: 20px;
+            color: $main;
+            transform: translateY(1px);
+          }
+        }
+      }
+    }
+    .box_two {
+      //background: rgb(94, 255, 0);
+      padding-block: $gap * 3;
+      form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto 1fr auto;
+        gap: 20px;
+        .input_x {
+          //background: red;
+          display: flex;
+          flex-direction: column;
+          gap: $gap / 2;
+          input {
+            height: 40px;
+            padding-inline: $gap / 2;
+            background: transparent;
+            border: 1px solid rgba($white, 0.5);
+            color: $white;
+          }
+          textarea {
+            padding: $gap / 2;
+            resize: none;
+            background: transparent;
+            border: 1px solid rgba($white, 0.5);
+            color: $white;
+            height: 100px;
+          }
+          button {
+            height: 40px;
+            border: none;
+            background: $main;
+            color: $white;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+          }
+          label {
+            color: $white;
+            font-size: 14px;
+          }
+          &:nth-child(3) {
+            grid-column: 1/3;
+          }
+          &:nth-child(4) {
+            grid-column: 2/3;
+          }
+        }
+      }
+    }
+  }
+}
