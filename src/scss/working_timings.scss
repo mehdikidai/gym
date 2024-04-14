@@ -1,0 +1,49 @@
+@import "./globle";
+.working_timings {
+  @include container();
+  height: auto;
+  //background: red;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: $gap;
+
+  .table_timings {
+    grid-column: 1/4;
+    background: $black;
+
+    table,
+    td,
+    th {
+      border: 1px solid transparent;
+      height: 44px;
+      color: $white;
+      font-size: 14px;
+    }
+
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      
+      td {
+        padding-inline: $gap;
+      }
+      tr:nth-child(1){
+        display: none;
+      }
+      tr:nth-child(even) {
+        background-color: lighten($black, 2%);
+      }
+      tr:nth-child(odd) {
+        background-color: lighten($black, 6%);
+      }
+
+      .arrow_right{
+        i{
+            color: rgba($white, 0.2);
+            font-size: 20px;
+        }
+      }
+      
+    }
+  }
+}

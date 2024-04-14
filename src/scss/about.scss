@@ -9,14 +9,16 @@
        //background: red;
        &_1{
         position: relative;
+
         img{
-            width: calc(100% - 30px);
-            height: calc(100% - 30px);
+            width: calc(100% - 20px);
+            height: calc(100% - 20px);
             object-fit: cover;
             position: absolute;
             right: 0;
             bottom: 0;
-            box-shadow: -30px -30px $main;
+            box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.4),-20px -20px $main;
+            
         }
        }
        &_2{
@@ -52,7 +54,7 @@
         ul{
             display: flex;
             flex-direction: column;
-            gap: $gap;
+            gap: $gap * 0.5;
             margin-top: 40px;
             li{
                 color: $white;
