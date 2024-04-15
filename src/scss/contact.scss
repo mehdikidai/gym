@@ -124,4 +124,13 @@
       }
     }
   }
+  .contact .boxs .box_one ul li {
+    font-size: 12px;
+    i{
+      font-size: 16px;
+    }
+  }
+  .contact .boxs .box_one {
+    padding-block: $gap * 2.5;
+  }
 }

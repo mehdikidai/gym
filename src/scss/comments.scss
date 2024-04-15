@@ -95,16 +95,22 @@
 }
 
 .splide__arrow--prev {
-    left: -4em;
+  left: -4em;
 }
 .splide__arrow--next {
-    right: -4em;
+  right: -4em;
 }
 
 @include respond("phone") {
   .comments {
     @include container($gap);
-
   }
-  
+  .splide__arrow-- {
+    &prev {
+      display: none !important;
+    }
+    &next {
+      display: none !important;
+    }
+  }
 }

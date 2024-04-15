@@ -24,3 +24,11 @@
         }
     }
 }
+
+@include respond("phone"){
+    .footer{
+        .box{
+            @include container($gap); 
+        }
+    }
+}

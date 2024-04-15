@@ -108,4 +108,11 @@
     display: none;
     visibility: hidden;
   }
+  .photo{
+    //background-position: 40% -250%;
+  }
+  .photo .container button.btn_cover {
+    padding: 10px 20px;
+    border-radius: 20px;
+  }
 }

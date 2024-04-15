@@ -17,15 +17,15 @@ function Contact() {
         <div className="box_two">
           <form action="#" method="post">
             <div className="input_x">
-              <label htmlFor="name"><i class="material-symbols-outlined">person</i>name</label>
+              <label htmlFor="name"><i className="material-symbols-outlined">person</i>name</label>
               <input type="text" name="name" id="name" placeholder="name" autoComplete="off"/>
             </div>
             <div className="input_x">
-              <label htmlFor="name"><i class="material-symbols-outlined">smartphone</i>phone</label>
+              <label htmlFor="name"><i className="material-symbols-outlined">smartphone</i>phone</label>
               <input type="text" name="phone" id="phone" placeholder="phone" autoComplete="off" />
             </div>
             <div className="input_x">
-            <label htmlFor="name"><i class="material-symbols-outlined">inbox</i>phone</label>
+            <label htmlFor="name"><i className="material-symbols-outlined">inbox</i>phone</label>
               <textarea name="msg" id="" cols="30" rows="10" placeholder="msg" autoComplete="off"></textarea>
             </div>
             <div className="input_x">
