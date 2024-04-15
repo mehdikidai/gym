@@ -4,7 +4,7 @@
 
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  gap: $gap;
+  gap: $gap * 2;
   //background: red;
   .card {
     background: transparent;

@@ -13,6 +13,6 @@ export function dayOfWeek() {
     "Saturday",
   ];
 
-  return days[dayOfWeek];
+  return days[dayOfWeek].toLowerCase();
 
 }

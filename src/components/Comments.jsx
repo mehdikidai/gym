@@ -6,8 +6,13 @@ import "./../scss/comments.scss";
 function Comments() {
   const options = {
     perPage: 3,
-    rewind : true,
-    gap:'20px'
+    rewind: true,
+    gap: "40px",
+    breakpoints: {
+      640: {
+        perPage: 1,
+      },
+    },
   };
 
   return (
@@ -20,30 +25,11 @@ function Comments() {
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
               culpa debitis dolor ea voluptas!
             </span>
-            <div className="avatar"><img src="https://mui.com/static/images/avatar/1.jpg" alt="user"/></div>
-            <h3>user</h3>
-          </div>
-        </SplideSlide>
-        <SplideSlide>
-          <div className="comment_box">
-            <i className="material-symbols-outlined">format_quote</i>
-            <span>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
-              culpa debitis dolor ea voluptas!
-            </span>
-            <div className="avatar"><img src="https://mui.com/static/images/avatar/1.jpg" alt="user"/></div>
-            <h3>user</h3>
-          </div>
-        </SplideSlide>
-        <SplideSlide>
-          <div className="comment_box">
-            <i className="material-symbols-outlined">format_quote</i>
-            <span>
-              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
-              culpa debitis dolor ea voluptas!
-            </span>
             <div className="avatar">
-                <img src="https://mui.com/static/images/avatar/1.jpg" alt="user"/>
+              <img
+                src="https://mui.com/static/images/avatar/1.jpg"
+                alt="user"
+              />
             </div>
             <h3>user</h3>
           </div>
@@ -56,7 +42,10 @@ function Comments() {
               culpa debitis dolor ea voluptas!
             </span>
             <div className="avatar">
-                <img src="https://mui.com/static/images/avatar/1.jpg" alt="user"/>
+              <img
+                src="https://mui.com/static/images/avatar/1.jpg"
+                alt="user"
+              />
             </div>
             <h3>user</h3>
           </div>
@@ -66,10 +55,44 @@ function Comments() {
             <i className="material-symbols-outlined">format_quote</i>
             <span>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
-              
+              culpa debitis dolor ea voluptas!
             </span>
             <div className="avatar">
-                <img src="https://mui.com/static/images/avatar/1.jpg" alt="user"/>
+              <img
+                src="https://mui.com/static/images/avatar/1.jpg"
+                alt="user"
+              />
+            </div>
+            <h3>user</h3>
+          </div>
+        </SplideSlide>
+        <SplideSlide>
+          <div className="comment_box">
+            <i className="material-symbols-outlined">format_quote</i>
+            <span>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
+              culpa debitis dolor ea voluptas!
+            </span>
+            <div className="avatar">
+              <img
+                src="https://mui.com/static/images/avatar/1.jpg"
+                alt="user"
+              />
+            </div>
+            <h3>user</h3>
+          </div>
+        </SplideSlide>
+        <SplideSlide>
+          <div className="comment_box">
+            <i className="material-symbols-outlined">format_quote</i>
+            <span>
+              Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
+            </span>
+            <div className="avatar">
+              <img
+                src="https://mui.com/static/images/avatar/1.jpg"
+                alt="user"
+              />
             </div>
             <h3>user</h3>
           </div>

@@ -1,13 +1,21 @@
-@import './globle';
-.title_box{
-    //background: rgb(111, 0, 255);
-    @include container();
-    height: auto;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-direction: column;
-    gap: $gap;
-    padding-block: $gap * 2;
-   @extend %title;
+@import "./globle";
+.title_box {
+  //background: rgb(111, 0, 255);
+  @include container();
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: $gap;
+  padding-block: $gap * 2;
+  @extend %title;
+}
+
+@include respond("phone") {
+    .title_box h3 {
+        font-size: 30px;
+        text-transform: uppercase;
+        color: #ffffff;
+      }
 }

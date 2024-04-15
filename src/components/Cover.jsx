@@ -4,7 +4,7 @@ import Nav from "./Nav";
 import Facebook from "../icons/Facebook";
 import Twitter from "../icons/Twitter";
 import Iinstagram from "../icons/Iinstagram";
-import { Loading } from "../icons/Loading";
+
 
 function Cover() {
 
@@ -19,13 +19,13 @@ function Cover() {
     <div className="photo">
       <div className="social_media">
         <a href="#">
-          <Facebook w={24}/>
+          <Facebook w={22}/>
         </a>
         <a href="#">
-          <Twitter w={24}/>
+          <Twitter w={22}/>
         </a>
         <a href="#">
-          <Iinstagram w={24}/>
+          <Iinstagram w={22}/>
         </a>
       </div>
       <div className="container">

@@ -12,6 +12,7 @@ import Spacing from './components/Spacing';
 import Title from './components/Title';
 import Video from './components/Video';
 import WorkingTimings from './components/WorkingTimings';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -37,7 +38,7 @@ function App() {
        <Comments/>
        <Spacing/>
        <Contact/>
-       <Spacing/>
+       <Footer/>
     </div>
   );
 }

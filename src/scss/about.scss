@@ -3,7 +3,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   @include container();
-  gap: $gap * 1;
+  gap: $gap * 2;
   .box {
     aspect-ratio: 1;
     //background: red;
@@ -31,6 +31,7 @@
         h2 {
           color: $white;
           transform: translateY(-4px);
+          text-transform: uppercase;
         }
         span {
           width: 40px;
@@ -41,8 +42,9 @@
         }
       }
       h3 {
-        font-size: 40px;
+        font-size: 34px;
         color: $white;
+        text-transform: uppercase;
         span {
           color: $main;
         }
@@ -58,13 +60,15 @@
         gap: $gap * 0.5;
         margin-top: 40px;
         li {
-          color: $white;
+          color: rgba($white, 0.6);
           display: flex;
           align-items: center;
-          gap: $gap;
+          gap: 6px;
+          font-size: 14px;
           i {
             color: $green;
-            font-size: 22px
+            font-size: 18px;
+            transform: translateY(2px)
           }
         }
       }
@@ -95,6 +99,9 @@
     .box_2 {
       //background: red;
       padding-block: $gap;
+    }
+    .box {
+        aspect-ratio: 1;
     }
   }
 }

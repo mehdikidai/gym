@@ -1,95 +1,110 @@
 @import "./globle";
 
-.comments{
-    @include container();
-    height: auto;
-    //background: red;
-    .comment_box{
-        
-        height: 460px;
-        background: lighten($black, 2%);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        color: #fff;
-        flex-direction: column;
-        gap: $gap;
-        padding-top: $gap * 3;
-        padding-bottom: $gap * 1;
-        i{
-            font-size: 60px;
-            color: $main;
-            rotate: 180deg;
-        }
-        span{
-            width: 80%;
-            max-width: 600px;
-            color: $white;
-            //background: red;
-            padding: $gap;
-            flex: 1;
-            text-align: center;
-            font-size: 16px;
-            line-height: 1.8;
-        }
-        .avatar{
-            width: 50px;
-            aspect-ratio: 1;
-            border-radius: 50%;
-            background: rgb(27, 27, 27);
-            clip-path: ellipse(50% 50% at 50% 50%);
-            img{
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
-        }
-        h3{
-            font-size: 16px;
-            color: rgba($white, 0.2);
-            text-transform: capitalize;
-            transform: translateY(-6px);
-        }
-        
+.comments {
+  @include container();
+  height: auto;
+  //background: red;
+  .comment_box {
+    height: 400px;
+    background: lighten($black, 2%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    flex-direction: column;
+    gap: $gap;
+    padding-top: $gap * 5;
+    padding-bottom: $gap * 1;
+    i {
+      font-size: 70px;
+      color: rgba($white, 0.2);
+      rotate: 180deg;
+      position: absolute;
+      top: 20px;
+      right: 20px;
     }
+    span {
+      width: 80%;
+      max-width: 600px;
+      color: $white;
+      //background: red;
+      padding: $gap / 2;
+      flex: 1;
+      //text-align: center;
+      font-size: 16px;
+      line-height: 1.8;
+    }
+    .avatar {
+      width: 50px;
+      aspect-ratio: 1;
+      border-radius: 50%;
+      background: rgb(27, 27, 27);
+      clip-path: ellipse(50% 50% at 50% 50%);
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    h3 {
+      font-size: 16px;
+      color: rgba($white, 0.2);
+      text-transform: capitalize;
+      transform: translateY(-6px);
+    }
+  }
 }
 
 .splide__arrow {
-    align-items: center;
-    background: transparent !important;
-    border: 0;
-    border-radius: 0;
-    cursor: pointer;
-    display: flex;
-    height: 1.8em;
-    justify-content: center;
-    opacity: .9;
-    padding: 0;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 1.8em;
-    z-index: 1;
-    svg {
-        fill: $white;
-        height: 1em;
-        width: 1em;
-    }
-    
+  align-items: center;
+  background: transparent !important;
+  border: 0;
+  border-radius: 0;
+  cursor: pointer;
+  display: flex;
+  height: 1.8em;
+  justify-content: center;
+  opacity: 0.9;
+  padding: 0;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 1.8em;
+  z-index: 1;
+  svg {
+    fill: $main;
+    height: 1em;
+    width: 1em;
+  }
 }
 .splide__pagination__page.is-active {
-    background: $main;
-    transform: scale(1.4);
-    z-index: 1;
-    opacity: 1;
+  background: $main;
+  transform: scale(1.4);
+  z-index: 1;
+  opacity: 1;
 }
 .splide__pagination__page {
-    background: $main;
-    height: 6px;
-    opacity: .5;
-    width: 6px;
+  background: $main;
+  height: 6px;
+  opacity: 0.5;
+  width: 6px;
 }
 
 .splide__pagination {
-	display: none !important;
+  display: none !important;
+}
+
+.splide__arrow--prev {
+    left: -4em;
+}
+.splide__arrow--next {
+    right: -4em;
+}
+
+@include respond("phone") {
+  .comments {
+    @include container($gap);
+
+  }
+  
 }

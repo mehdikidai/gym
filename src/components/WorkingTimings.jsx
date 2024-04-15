@@ -3,18 +3,19 @@ import "./../scss/working_timings.scss";
 import { dayOfWeek } from "./../helpers";
 
 function WorkingTimings() {
+  const days = useRef();
 
- const days = useRef()
+  useEffect(() => {
 
-  useEffect(()=>{
-    
-    days.current.querySelectorAll('tr').forEach(element => {
-
-        element.dataset.day === dayOfWeek() && element.classList.add('active') 
-        
+    days.current.querySelectorAll("tr").forEach((element) => {
+      element.dataset.day.toLowerCase() === dayOfWeek() &&
+        element.classList.add("active");
     });
 
-  },[])
+    
+
+
+  }, []);
   return (
     <div className="working_timings">
       <div className="table_timings">
@@ -63,7 +64,7 @@ function WorkingTimings() {
               </th>
               <th>22:30</th>
             </tr>
-            <tr data-day="Friday"> 
+            <tr data-day="Friday">
               <td>Friday</td>
               <th>08:30</th>
               <th className="arrow_right">

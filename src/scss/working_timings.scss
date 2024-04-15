@@ -24,12 +24,14 @@
       border-collapse: collapse;
       width: 100%;
 
+      thead{
+        display: none;
+      }
+
       td {
         padding-inline: $gap;
       }
-      tr:nth-child(1) {
-        display: none;
-      }
+      
       tr:nth-child(even) {
         background-color: lighten($black, 2%);
       }
@@ -39,11 +41,11 @@
 
       tr{
         td:nth-child(1){
-            border-right: 1px solid rgba($white, 0.2);
+            //border-right: 1px solid rgba($white, 0.2);
             width: 50% !important;
             
         }
-        box-shadow: inset 4px 0 rgba($white, 0.1);
+        box-shadow: inset 4px 0 rgba($white, 0);
         &.active{
             box-shadow: inset 4px 0 $main;
             td:nth-child(1){
