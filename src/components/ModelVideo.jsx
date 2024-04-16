@@ -10,7 +10,7 @@ function ModelVideo({ toggleVideo }) {
   
 
   return (
-    <div className="model_video">
+    <div className="model_video" onClick={toggleVideo}>
       <div className="box">
         <ReactPlayer
           url={videUrl}
@@ -25,9 +25,9 @@ function ModelVideo({ toggleVideo }) {
         />
       </div>
 
-      <button className="close" onClick={toggleVideo}>
+      {/* <button className="close" onClick={toggleVideo}>
         <i className="material-symbols-outlined">close</i>
-      </button>
+      </button> */}
     </div>
   );
 }

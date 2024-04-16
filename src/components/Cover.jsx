@@ -5,30 +5,33 @@ import Facebook from "../icons/Facebook";
 import Twitter from "../icons/Twitter";
 import Iinstagram from "../icons/Iinstagram";
 
-
 function Cover() {
-
-  const goBottom = () =>{
+  const goBottom = () => {
     window.scrollTo({
       top: window.document.documentElement.clientHeight,
       behavior: "smooth",
     });
-    console.log(window.document.documentElement)
-  }
+    console.log(window.document.documentElement);
+  };
+
+  
   return (
     <div className="photo">
       <div className="social_media">
         <a href="#">
-          <Facebook w={22}/>
+          <Facebook w={22} />
         </a>
         <a href="#">
-          <Twitter w={22}/>
+          <Twitter w={22} />
         </a>
         <a href="#">
-          <Iinstagram w={22}/>
+          <Iinstagram w={22} />
         </a>
       </div>
-      <div className="container">
+      <div
+        className="container"
+        
+      >
         <Nav />
         <h1>
           Lorem ipsum <span>dolor</span> sit amet consectetur.
@@ -42,9 +45,7 @@ function Cover() {
           click here
           <i className="material-symbols-outlined">chevron_right</i>
         </button>
-        
       </div>
-      
     </div>
   );
 }

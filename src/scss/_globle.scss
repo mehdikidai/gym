@@ -52,14 +52,14 @@
   h2 {
     font-size: 18px;
     font-weight: 500;
-    color: $white;
+    color: rgba($white, 0.6);
   }
   h3 {
     font-size: 34px;
     text-transform: uppercase;
     color: $white;
-    .span_h3 {
-      color: $main;
+    span {
+      color: $main !important;
     }
   }
   span.span_title {

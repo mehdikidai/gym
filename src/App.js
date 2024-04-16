@@ -16,26 +16,31 @@ import {
   Footer,
 } from "./components";
 
+import Config from "./config";
+
 
 function App() {
+
+  const { titles } = Config
+
   return (
     <div className="App">
       <Cover />
       <Spacing />
       <AboutUs />
       <Spacing />
-      <Title />
+      <Title tit={titles.services} /> 
       <Service />
       <Spacing />
       <Video />
       <Spacing />
-      <Title />
+      <Title tit={titles.prices} />
       <Pricing />
       <Spacing />
-      <Title />
+      <Title tit={titles.workingTimings} />
       <WorkingTimings />
       <Spacing />
-      <Title />
+      <Title tit={titles.comments} />
       <Comments />
       <Spacing />
       <Contact />

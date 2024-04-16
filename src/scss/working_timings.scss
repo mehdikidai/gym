@@ -33,10 +33,10 @@
       }
       
       tr:nth-child(even) {
-        background-color: lighten($black, 2%);
+        background-color: $black;
       }
       tr:nth-child(odd) {
-        background-color: lighten($black, 6%);
+        background-color: lighten($black, 2%);
       }
 
       tr{
@@ -47,11 +47,13 @@
         }
         box-shadow: inset 4px 0 rgba($white, 0);
         &.active{
-            box-shadow: inset 4px 0 $main;
-            td:nth-child(1){
-                color: $main;
-                
+
+            //box-shadow: inset 4px 0 $main;
+            
+            td{
+                color: $main !important;
             }
+            
         }
       }
 

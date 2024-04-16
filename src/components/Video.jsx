@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./../scss/video.scss";
-import PhotoVideo from "../images/video.jpg";
-import toast, { Toaster } from "react-hot-toast";
+import PhotoVideo from "../images/video/index.jpg";
+
 import ModelVideo from "./ModelVideo";
 
 function Video() {
