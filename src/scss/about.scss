@@ -2,6 +2,7 @@
 .AboutAs {
   display: grid;
   grid-template-columns: 1fr 1fr;
+  scroll-margin-top: $margin;
   @include container();
   gap: $gap * 2;
   .box {

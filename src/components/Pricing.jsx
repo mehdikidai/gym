@@ -1,27 +1,34 @@
 import React from "react";
 import "./../scss/pricing.scss";
 import Config from "../config";
+import { useTranslation } from 'react-i18next';
+import { useScroll,motion } from "framer-motion"
 
 function Pricing() {
-  const { prices , currency } = Config;
+
+  const { currency } = Config;
+  const { t } = useTranslation();
+  const { scrollY } = useScroll()
+
+  
   
   return (
     <div className="pricing">
 
-      {prices.map((el, i) => {
+      {t('prices.data',{returnObjects:true}).map((el, i) => {
         return (
-          <div className="card" key={i}>
-            <span className="price_title">{el.name}</span>
+          <motion.div className="card" key={i}>
+            <span className="price_title">{el.title_one}</span>
             <h4 className="price">{ el.price} <span>{currency}</span></h4>
-            <span className="price_title_2">{el.title}</span>
+            <span className="price_title_2">{el.title_two}</span>
             <span className="line"></span>
             <p>
               {
-                el.description
+                el.body
               }
             </p>
-            <button>{el.btn}</button>
-          </div>
+            <button>{t('prices.btn_join_new')}</button>
+          </motion.div>
         );
       })}
       

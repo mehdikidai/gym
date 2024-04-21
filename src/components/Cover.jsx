@@ -4,8 +4,12 @@ import Nav from "./Nav";
 import Facebook from "../icons/Facebook";
 import Twitter from "../icons/Twitter";
 import Iinstagram from "../icons/Iinstagram";
+import { useTranslation } from 'react-i18next';
 
 function Cover() {
+
+  const { t, i18n } = useTranslation();
+
   const goBottom = () => {
     window.scrollTo({
       top: window.document.documentElement.clientHeight,
@@ -33,16 +37,12 @@ function Cover() {
         
       >
         <Nav />
-        <h1>
-          Lorem ipsum <span>dolor</span> sit amet consectetur.
-        </h1>
-        <p>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum
-          corporis nobis temporibus alias dicta. Quos temporibus maxime minima
-          modi. Voluptates.
-        </p>
-        <button className="btn_cover" onClick={goBottom}>
-          click here
+        <h1 dangerouslySetInnerHTML={{ __html: t('cover.cover title h1') }}></h1>
+        <p dangerouslySetInnerHTML={{ __html: t('cover.cover title p') }}></p>
+        <button className={i18n.language === "ar" ? "btn_cover btn_rtl" : "btn_cover"} onClick={goBottom}>
+          {
+            t('cover.cover btn')
+          }
           <i className="material-symbols-outlined">chevron_right</i>
         </button>
       </div>

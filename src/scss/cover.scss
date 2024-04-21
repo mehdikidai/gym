@@ -58,10 +58,10 @@
       text-transform: uppercase;
       font-weight: 900;
       width: 90vw;
-      max-width: 800px;
+      max-width: 900px;
       span {
         color: $main;
-        font-size: 80px;
+        font-size: 90px;
       }
     }
     p {
@@ -89,9 +89,13 @@
         transform: translateY(1px);
         transition: all 0.3s linear;
       }
+      &.btn_rtl  i{
+        transform: translateY(1px) rotate(-180deg);
+      }
       &:hover i {
         transform: translateY(1px) rotate(90deg);
       }
+      
     }
   }
 }

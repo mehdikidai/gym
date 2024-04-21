@@ -11,25 +11,27 @@
   ul.nav_ul {
     display: flex;
     gap: $gap * 2;
+    align-items: center;
     li {
+      position: relative;
       a {
         color: $white;
-        font-size: 16px;
+        font-size: 14px;
         font-weight: 400;
         position: relative;
         text-transform: uppercase;
-        span{
-            position: absolute;
-            width: 0;
-            height: 4px;
-            bottom: -10px;
-            background: $main;
-            border-radius: 2px;
-            transition: all .3s ease-in-out;
+        span {
+          position: absolute;
+          width: 0;
+          height: 4px;
+          bottom: -10px;
+          background: $main;
+          border-radius: 2px;
+          transition: all 0.3s ease-in-out;
         }
 
-        &:hover span{
-            width: 100%;
+        &:hover span {
+          width: 100%;
         }
       }
     }
@@ -38,6 +40,47 @@
     background: transparent;
     border: none;
     cursor: pointer;
+  }
+  button.btn_lang {
+    //background: red;
+    height: 30px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    padding-inline: 15px;
+    justify-content: space-between;
+    color: $white;
+    text-transform: uppercase;
+  }
+  .list {
+    position: absolute;
+    width: 100%;
+    height: auto;
+    top: 40px;
+    left: 0;
+    opacity: 0;
+    background: transparent;
+    display: flex;
+    flex-direction: column;
+    transform-origin: 0 0 0;
+    transform: scaleY(0);
+    transition: all 0.2s ease-in-out;
+    gap: 5px;
+    button {
+      background: $white;
+      height: 26px;
+      display: flex;
+      align-items: center;
+      padding-inline: 15px;
+      justify-content: space-between;
+      color: $white;
+      text-transform: uppercase;
+      color: $black;
+    }
+    &_show {
+      opacity: 1;
+      transform: scaleY(1);
+    }
   }
 }
 
@@ -50,7 +93,7 @@
   }
 
   .nav button {
-    img{
+    img {
       width: 90px;
     }
   }

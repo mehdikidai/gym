@@ -16,6 +16,8 @@
     .title_box h3 {
         font-size: 30px;
         text-transform: uppercase;
-        color: #ffffff;
+        color: $white;
+        text-align: center;
+        padding-inline: $gap * 2;
       }
 }

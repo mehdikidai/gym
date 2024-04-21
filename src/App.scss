@@ -6,6 +6,10 @@
   height: auto;
 }
 
+.rtl{
+  direction: rtl !important;
+}
+
 .spacing{
   height: 80px;
 }
@@ -34,6 +38,13 @@ body::-webkit-scrollbar-track {
 body::-webkit-scrollbar-thumb {
   background:$main;
   border-radius: 0;
+  
+}
+
+:root{
+  
+  scrollbar-color: $main lighten($black, 4%) !important;
+  scrollbar-width: thin !important;
   
 }
 

@@ -3,50 +3,48 @@ import "./App.scss";
 //import { useSelector } from 'react-redux';
 
 import {
-  AboutUs,
-  Comments,
-  Contact,
-  Cover,
-  Pricing,
-  Service,
-  Spacing,
-  Title,
-  Video,
-  WorkingTimings,
-  Footer,
+    AboutUs,
+    Comments,
+    Contact,
+    Cover,
+    Pricing,
+    Service,
+    Spacing,
+    Title,
+    Video,
+    WorkingTimings,
+    Footer,
 } from "./components";
 
-import Config from "./config";
-
+import { useTranslation } from "react-i18next";
 
 function App() {
+    const { t, i18n } = useTranslation();
 
-  const { titles } = Config
-
-  return (
-    <div className="App">
-      <Cover />
-      <Spacing />
-      <AboutUs />
-      <Spacing />
-      <Title tit={titles.services} /> 
-      <Service />
-      <Spacing />
-      <Video />
-      <Spacing />
-      <Title tit={titles.prices} />
-      <Pricing />
-      <Spacing />
-      <Title tit={titles.workingTimings} />
-      <WorkingTimings />
-      <Spacing />
-      <Title tit={titles.comments} />
-      <Comments />
-      <Spacing />
-      <Contact />
-      <Footer />
-    </div>
-  );
+    return (
+        <div className={i18n.language === "ar" ? "App rtl" : "App"}>
+            <Cover />
+            <Spacing />
+            <AboutUs />
+            <Spacing />
+            <Title info={t("services.title", { returnObjects: true })} />
+            <Service />
+            <Spacing />
+            <Video />
+            <Spacing />
+            <Title info={t("services.title", { returnObjects: true })} />
+            <Pricing />
+            <Spacing />
+            <Title info={t("services.title", { returnObjects: true })} />
+            <WorkingTimings />
+            <Spacing />
+            <Title info={t("services.title", { returnObjects: true })} />
+            <Comments />
+            <Spacing />
+            <Contact />
+            <Footer />
+        </div>
+    );
 }
 
 export default App;

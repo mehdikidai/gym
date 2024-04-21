@@ -1,0 +1,89 @@
+{
+    "cover": {
+        "cover title h1": "LOREM IPSUM <span>DOLOR</span> SIT AMET CONSECTETUR. AR",
+        "cover title p": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.",
+        "cover btn": "click here"
+    },
+    "about": {
+        "title": {
+            "title_h2": "What We Do",
+            "title_h3": "our <span>services</span>",
+            "id": "about"
+        },
+        "about": "about",
+        "about title h3": "Lorem ipsum dolor sit amet <span>consectetur adipisicing elit.",
+        "about body": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora aperiam earum saepe et quas enim perspiciatis voluptates, libero sint commodi, consequatur rem vero blanditiis nam aspernatur molestiae vel ad hic.",
+        "list": [
+            "Lorem ipsum dolor sit amet 1",
+            "Lorem ipsum dolor sit amet 2",
+            "Lorem ipsum dolor sit amet 3"
+        ]
+    },
+    "services": {
+        "title": {
+            "title_h2": "What We Do",
+            "title_h3": "our <span>services</span>",
+            "id": "services"
+        },
+        "service list": [
+            "LOREM, IPSUM DOLOR 10.",
+            "LOREM, IPSUM DOLOR 20.",
+            "LOREM, IPSUM DOLOR 30."
+        ]
+    },
+    "video": {
+        "h2": "Lorem, Ipsum.",
+        "h3": "Lorem <span className='span_h3'>ipsum</span>"
+    },
+    "prices": {
+        "btn_join_new": "join new",
+        "data": [
+            {
+                "title_one": "title one",
+                "title_two": "title two",
+                "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab mollitia voluptate sequi in odit placeat quasi hic cupiditate reprehenderit voluptatum!",
+                "price": 250
+            },
+            {
+                "title_one": "title one",
+                "title_two": "title two",
+                "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab mollitia voluptate sequi in odit placeat quasi hic cupiditate reprehenderit voluptatum!",
+                "price": 600
+            },
+            {
+                "title_one": "title one",
+                "title_two": "title two",
+                "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab mollitia voluptate sequi in odit placeat quasi hic cupiditate reprehenderit voluptatum!",
+                "price": 1000
+            }
+        ]
+    },
+    "days": {
+        "Sunday": "الأحد",
+        "Monday": "الإثنين",
+        "Tuesday": "الثلاثاء",
+        "Wednesday": "الأربعاء",
+        "Thursday": "الخميس",
+        "Friday": "الجمعة",
+        "Saturday": "السبت"
+    },
+    "contact": {
+        "form": {
+            "name": "Name",
+            "phone": "Phone",
+            "message": "Message",
+            "btn_send_message": "send message"
+        },
+        "get in touch": "<span>get in</span> touch",
+        "address": "Apt. 599 Erbelegasse 80a, Heroldheim, HE 35439"
+    },
+    "navbar": {
+        "HOME": "Home",
+        "ABOUT": "About",
+        "SERVICES": "Services",
+        "PRICES": "Prices",
+        "CONTACT": "Contact"
+    },
+    "Sent successfully": "Sent successfully",
+    "Your message failed to send": "Your message failed to send"
+}

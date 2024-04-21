@@ -4,7 +4,7 @@ const data = {
     videUrl:'https://www.youtube.com/watch?v=fCVm5U2ob8U'
 }
 
-export default (state=data, action) => {
+const Store  = (state=data, action) => {
   switch (action.type) {
     case "NAME":
       return {...state,name:'salma'};
@@ -12,3 +12,5 @@ export default (state=data, action) => {
       return state;
   }
 };
+
+export default Store

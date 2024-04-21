@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import ReactPlayer from "react-player";
 import "../scss/model_video.scss";
 import { useSelector } from 'react-redux'

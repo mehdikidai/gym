@@ -1,6 +1,8 @@
 const config = {
   name: "gym name",
 
+  apiMsg:"https://sheetdb.io/api/v1/aup7h1yb0yvlt",
+
   socialMedia: {
     fb: "https://www.facebook.com/",
     x: "https://www.facebook.com/",
@@ -93,9 +95,10 @@ const config = {
       "Lorem ipsum dolor sit amet <span>consectetur adipisicing elit.</span>",
     body: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora aperiam earum saepe et quas enim perspiciatis voluptates, libero sint commodi, consequatur rem vero blanditiis nam aspernatur molestiae vel ad hic.",
     list: [
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet",
-      "Lorem ipsum dolor sit amet",
+      "Lorem ipsum dolor sit amet 1",
+      "Lorem ipsum dolor sit amet 2",
+      "Lorem ipsum dolor sit amet 3",
+      
     ],
   },
   services: [
@@ -117,22 +120,28 @@ const config = {
     services: {
       title: "our <span>services</span>",
       small_title: "what we do",
+      id:"services"
     },
     about: {
       title: "about <span>ipsum</span>",
-      small_title: "zzzzz",
+      small_title: "about",
+      id:"about"
     },
     prices: {
       title: "choose your <span>pricing</span> plan",
       small_title: "our pricing",
+      id:"prices"
+
     },
     comments: {
       title: "comments <span>ipsum</span>",
-      small_title: "zzzzz",
+      small_title: "comments",
+      id:"comments"
     },
     workingTimings: {
       title: "Timings <span>ipsum</span>",
-      small_title: "zzzzz",
+      small_title: "Timings",
+      id:"workingTimings"
     },
   },
 

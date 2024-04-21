@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import toast, { Toaster } from "react-hot-toast";
 import Loading from "../icons/Loading";
 
@@ -6,9 +6,13 @@ import "./../scss/contact.scss";
 import config from "../config";
 import { z } from "zod";
 import axios from "axios";
+import { useTranslation } from "react-i18next";
 
 function Contact() {
-  const { info, alert } = config;
+  const { info, alert,apiMsg } = config;
+
+  const { t } = useTranslation();
+
   const styleAlert = {
     borderRadius: "10px",
     background: "#000",
@@ -31,6 +35,7 @@ function Contact() {
   const schemaMsg = z.string().min(5).max(160);
 
   const handleSubmit = (event) => {
+
     event.preventDefault();
 
     const vName = schemaName.safeParse(formData.name).success;
@@ -41,11 +46,13 @@ function Contact() {
     setErrorPhone(!vPhone);
     setErrorMsg(!vMsg);
 
+
     if (vName && vPhone && vMsg) {
+
       setLoading(true);
 
       axios
-        .post("https://sheetdb.io/api/v1/aup7h1yb0yvlt", {
+        .post(apiMsg, {
           ...formData,
           id: "INCREMENT",
           date:"DATETIME"
@@ -57,26 +64,27 @@ function Contact() {
               phone: "",
               message: "",
             });
-            toast.success(alert.successMsg, { style: styleAlert });
+            toast.success(t('Sent successfully'), { style: styleAlert });
           }
         })
-        .catch(() => toast.error(alert.errorMsg, { style: styleAlert }))
+        .catch(() => toast.error(t('Your message failed to send'), { style: styleAlert }))
         .finally(() => setLoading(false));
     }
   };
 
   return (
-    <div className="contact">
+    <div className="contact" id="contact">
       <Toaster position="top-center" reverseOrder={false} />
       
       <div className="boxs">
         <div className="box_one">
-          <h3 dangerouslySetInnerHTML={{ __html: info.titleFooter }}></h3>
+
+          <h3 dangerouslySetInnerHTML={{ __html: t('contact.get in touch') }}></h3>
          
           <ul>
             <li>
               <i className="material-symbols-outlined">near_me</i>
-              {info.address}
+              {t('contact.address')}
             </li>
             <li>
               <i className="material-symbols-outlined">call</i>
@@ -92,15 +100,16 @@ function Contact() {
           <form action="#" method="post" onSubmit={handleSubmit}>
             <div className="input_x">
               <label htmlFor="name">
-                <i className="material-symbols-outlined">person</i>name
+                <i className="material-symbols-outlined">person</i>{t('contact.form.name')}
               </label>
               <input
                 className={errorName ? "error" : null}
                 type="text"
                 name="name"
                 id="name"
-                placeholder="name"
+                placeholder={t('contact.form.name')}
                 autoComplete="off"
+                
                 value={formData.name}
                 onChange={(e) => {
                   setFormData({ ...formData, name: e.target.value });
@@ -110,7 +119,7 @@ function Contact() {
             </div>
             <div className="input_x">
               <label htmlFor="name">
-                <i className="material-symbols-outlined">smartphone</i>phone
+                <i className="material-symbols-outlined">smartphone</i>{t('contact.form.phone')}
               </label>
               <input
                 className={errorPhone ? "error" : null}
@@ -118,8 +127,9 @@ function Contact() {
                 name="phone"
                 id="phone"
                 value={formData.phone}
-                placeholder="phone"
+                placeholder={t('contact.form.phone')}
                 autoComplete="off"
+                
                 onChange={(e) => {
                   setFormData({ ...formData, phone: e.target.value });
                   setErrorPhone(false);
@@ -128,7 +138,7 @@ function Contact() {
             </div>
             <div className="input_x">
               <label htmlFor="name">
-                <i className="material-symbols-outlined">inbox</i>message
+                <i className="material-symbols-outlined">inbox</i>{t('contact.form.message')}
               </label>
               <textarea
                 className={errorMsg ? "error" : null}
@@ -136,8 +146,9 @@ function Contact() {
                 id=""
                 cols="30"
                 rows="10"
-                placeholder="message"
+                placeholder={t('contact.form.message')}
                 autoComplete="off"
+                spellCheck={false}
                 value={formData.message}
                 onChange={(e) => {
                   setFormData({ ...formData, message: e.target.value });
@@ -149,7 +160,7 @@ function Contact() {
               {loading ? (
                 <button type="submit" disabled><Loading style={{color:'#fff'}}/></button>
               ) : (
-                <button type="submit">send message</button>
+                <button type="submit">{t('contact.form.btn_send_message')}</button>
               )}
             </div>
           </form>

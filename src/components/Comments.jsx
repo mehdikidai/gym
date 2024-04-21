@@ -25,13 +25,14 @@ function Comments() {
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
               culpa debitis dolor ea voluptas!
             </span>
+            <h3>user</h3>
             <div className="avatar">
               <img
                 src="https://mui.com/static/images/avatar/1.jpg"
                 alt="user"
               />
             </div>
-            <h3>user</h3>
+            
           </div>
         </SplideSlide>
         <SplideSlide>
@@ -41,13 +42,14 @@ function Comments() {
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
               culpa debitis dolor ea voluptas!
             </span>
+            <h3>user</h3>
             <div className="avatar">
               <img
                 src="https://mui.com/static/images/avatar/1.jpg"
                 alt="user"
               />
             </div>
-            <h3>user</h3>
+           
           </div>
         </SplideSlide>
         <SplideSlide>
@@ -57,13 +59,14 @@ function Comments() {
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
               culpa debitis dolor ea voluptas!
             </span>
+            <h3>user</h3>
             <div className="avatar">
               <img
                 src="https://mui.com/static/images/avatar/1.jpg"
                 alt="user"
               />
             </div>
-            <h3>user</h3>
+            
           </div>
         </SplideSlide>
         <SplideSlide>
@@ -73,13 +76,14 @@ function Comments() {
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
               culpa debitis dolor ea voluptas!
             </span>
+            <h3>user</h3>
             <div className="avatar">
               <img
                 src="https://mui.com/static/images/avatar/1.jpg"
                 alt="user"
               />
             </div>
-            <h3>user</h3>
+            
           </div>
         </SplideSlide>
         <SplideSlide>
@@ -88,13 +92,14 @@ function Comments() {
             <span>
               Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vero
             </span>
+            <h3>user</h3>
             <div className="avatar">
               <img
                 src="https://mui.com/static/images/avatar/1.jpg"
                 alt="user"
               />
             </div>
-            <h3>user</h3>
+            
           </div>
         </SplideSlide>
       </Splide>
