@@ -1,6 +1,6 @@
 {
     "cover": {
-        "cover title h1": "LOREM IPSUM <span>DOLOR</span> SIT AMET CONSECTETUR. AR",
+        "cover title h1": "LOREM IPSUM <span>DOLOR</span> SIT AMET CONSECTETUR. EN",
         "cover title p": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.",
         "cover btn": "click here"
     },
@@ -36,6 +36,11 @@
         "h3": "Lorem <span className='span_h3'>ipsum</span>"
     },
     "prices": {
+        "title": {
+            "title_h2": "What We Do",
+            "title_h3": "our <span>prices</span>",
+            "id": "prices"
+        },
         "btn_join_new": "join new",
         "data": [
             {
@@ -59,13 +64,25 @@
         ]
     },
     "days": {
-        "Sunday": "الأحد",
-        "Monday": "الإثنين",
-        "Tuesday": "الثلاثاء",
-        "Wednesday": "الأربعاء",
-        "Thursday": "الخميس",
-        "Friday": "الجمعة",
-        "Saturday": "السبت"
+        "title": {
+            "title_h2": "What We Do",
+            "title_h3": "our <span>days</span>",
+            "id": "days"
+        },
+        "Sunday": "Sunday",
+        "Monday": "Monday",
+        "Tuesday": "Tuesday",
+        "Wednesday": "Wednesday",
+        "Thursday": "Thursday",
+        "Friday": "Friday",
+        "Saturday": "Saturday"
+    },
+    "comments":{
+        "title": {
+            "title_h2": "What We Do",
+            "title_h3": "our <span>comments</span>",
+            "id": "comments"
+        }
     },
     "contact": {
         "form": {
@@ -78,12 +95,27 @@
         "address": "Apt. 599 Erbelegasse 80a, Heroldheim, HE 35439"
     },
     "navbar": {
-        "HOME": "Home",
-        "ABOUT": "About",
-        "SERVICES": "Services",
-        "PRICES": "Prices",
-        "CONTACT": "Contact"
+        "HOME": {
+            "name":"Home",
+            "id":"home"
+        },
+        "ABOUT": {
+            "name":"About",
+            "id":"about"
+        },
+        "SERVICES": {
+            "name":"Services",
+            "id":"services"
+        },
+        "PRICES": {
+            "name":"Prices",
+            "id":"prices"
+        },
+        "CONTACT": {
+            "name":"Contact",
+            "id":"contact"
+        }
     },
-    "Sent successfully": "Sent successfully",
-    "Your message failed to send": "Your message failed to send"
+    "Sent successfully":"Sent successfully",
+    "Your message failed to send":"Your message failed to send"
 }

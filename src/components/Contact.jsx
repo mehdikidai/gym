@@ -9,7 +9,9 @@ import axios from "axios";
 import { useTranslation } from "react-i18next";
 
 function Contact() {
-  const { info, alert,apiMsg } = config;
+
+  const { info,apiMsg } = config;
+  
 
   const { t } = useTranslation();
 

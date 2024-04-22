@@ -5,6 +5,7 @@ import Facebook from "../icons/Facebook";
 import Twitter from "../icons/Twitter";
 import Iinstagram from "../icons/Iinstagram";
 import { useTranslation } from 'react-i18next';
+import { motion } from "framer-motion";
 
 function Cover() {
 

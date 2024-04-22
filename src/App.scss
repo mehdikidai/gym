@@ -4,10 +4,33 @@
   min-height: 100dvh;
   background: $black;
   height: auto;
+  *:not(i){
+    font-family: "Inter", sans-serif;
+  }
+  &.rtl{
+    direction: rtl !important;
+    *:not(i){
+      font-family: "Rubik", sans-serif;
+    }
+  }
 }
 
-.rtl{
-  direction: rtl !important;
+::-moz-selection { /* Code for Firefox */
+  color: $white;
+  background: $main;
+}
+
+::selection {
+  color: $white;
+  background: $main;
+}
+
+input::-webkit-datetime-edit-day-field:focus,
+input::-webkit-datetime-edit-month-field:focus,
+input::-webkit-datetime-edit-year-field:focus {
+    background-color: $main;
+    color: $white;
+    outline: none;
 }
 
 .spacing{

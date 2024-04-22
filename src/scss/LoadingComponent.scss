@@ -1,0 +1,13 @@
+@import "./globle";
+
+.LoadingComponent{
+    height: 100dvh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: $black;
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+}

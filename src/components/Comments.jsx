@@ -8,6 +8,7 @@ function Comments() {
     perPage: 3,
     rewind: true,
     gap: "40px",
+    direction: 'rtl',
     breakpoints: {
       640: {
         perPage: 1,

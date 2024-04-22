@@ -36,29 +36,42 @@
         "h3": "Lorem <span className='span_h3'>ipsum</span>"
     },
     "prices": {
+        "title": {
+            "title_h2": "What We Do",
+            "title_h3": "our <span>prices</span>",
+            "id": "prices"
+        },
         "btn_join_new": "join new",
         "data": [
             {
                 "title_one": "title one",
-                "title_two": "title two",
+                "title_two": "Tourist",
                 "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab mollitia voluptate sequi in odit placeat quasi hic cupiditate reprehenderit voluptatum!",
-                "price": 250
+                "price": 250,
+                "id":1
             },
             {
                 "title_one": "title one",
-                "title_two": "title two",
+                "title_two": "Master",
                 "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab mollitia voluptate sequi in odit placeat quasi hic cupiditate reprehenderit voluptatum!",
-                "price": 600
+                "price": 600,
+                "id":2
             },
             {
                 "title_one": "title one",
-                "title_two": "title two",
+                "title_two": "Power",
                 "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab mollitia voluptate sequi in odit placeat quasi hic cupiditate reprehenderit voluptatum!",
-                "price": 1000
+                "price": 1000,
+                "id":3
             }
         ]
     },
     "days": {
+        "title": {
+            "title_h2": "What We Do",
+            "title_h3": "our <span>days</span>",
+            "id": "days"
+        },
         "Sunday": "Sunday",
         "Monday": "Monday",
         "Tuesday": "Tuesday",
@@ -66,6 +79,13 @@
         "Thursday": "Thursday",
         "Friday": "Friday",
         "Saturday": "Saturday"
+    },
+    "comments":{
+        "title": {
+            "title_h2": "What We Do",
+            "title_h3": "our <span>comments</span>",
+            "id": "comments"
+        }
     },
     "contact": {
         "form": {
@@ -78,11 +98,26 @@
         "address": "Apt. 599 Erbelegasse 80a, Heroldheim, HE 35439"
     },
     "navbar": {
-        "HOME": "Home",
-        "ABOUT": "About",
-        "SERVICES": "Services",
-        "PRICES": "Prices",
-        "CONTACT": "Contact"
+        "HOME": {
+            "name":"Home",
+            "id":"home"
+        },
+        "ABOUT": {
+            "name":"About",
+            "id":"about"
+        },
+        "SERVICES": {
+            "name":"Services",
+            "id":"services"
+        },
+        "PRICES": {
+            "name":"Prices",
+            "id":"prices"
+        },
+        "CONTACT": {
+            "name":"Contact",
+            "id":"contact"
+        }
     },
     "Sent successfully":"Sent successfully",
     "Your message failed to send":"Your message failed to send"

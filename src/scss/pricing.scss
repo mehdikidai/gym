@@ -28,6 +28,12 @@
       color: $white;
       font-size: 33px;
       text-transform: uppercase;
+      small{
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: lowercase;
+        color: rgba($white, 0.5);
+      }
     }
     .price_title_2 {
       font-weight: 600;

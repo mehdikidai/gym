@@ -12,11 +12,12 @@ function Nav() {
   const [lang, setLang] = useState("en");
 
   const handleLang = (lang) => {
-    console.log(lang);
+
     setLang(lang);
     setTimeout(()=>{
       setShowList(false)
     },300)
+
     
   };
 
@@ -35,33 +36,33 @@ function Nav() {
       </button>
       <ul className="nav_ul">
         <li>
-          <a href="#">
+          <a href={`#${t("navbar.HOME.id")}`}>
             <span></span>
-            {t("navbar.HOME")}
+            {t("navbar.HOME.name")}
           </a>
         </li>
         <li>
-          <a href="#about">
+          <a href={`#${t("navbar.ABOUT.id")}`}>
             <span></span>
-            {t("navbar.ABOUT")}
+            {t("navbar.ABOUT.name")}
           </a>
         </li>
         <li>
-          <a href="#services">
+          <a href={`#${t("navbar.SERVICES.id")}`}>
             <span></span>
-            {t("navbar.SERVICES")}
+            {t("navbar.SERVICES.name")}
           </a>
         </li>
         <li>
-          <a href="#prices">
+          <a href={`#${t("navbar.PRICES.id")}`}>
             <span></span>
-            {t("navbar.PRICES")}
+            {t("navbar.PRICES.name")}
           </a>
         </li>
         <li>
-          <a href="#contact">
+          <a href={`#${t("navbar.CONTACT.id")}`}>
             <span></span>
-            {t("navbar.CONTACT")}
+            {t("navbar.CONTACT.name")}
           </a>
         </li>
         <li>
