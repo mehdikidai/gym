@@ -1,6 +1,6 @@
 {
     "cover": {
-        "cover title h1": "LOREM IPSUM <span>DOLOR</span> SIT AMET CONSECTETUR. EN",
+        "cover title h1": "help for ideal <span>body</span> fitness fr .",
         "cover title p": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.",
         "cover btn": "click here"
     },
@@ -45,21 +45,24 @@
         "data": [
             {
                 "title_one": "title one",
-                "title_two": "title two",
+                "title_two": "Tourist",
                 "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab mollitia voluptate sequi in odit placeat quasi hic cupiditate reprehenderit voluptatum!",
-                "price": 250
+                "price": 250,
+                "id":1
             },
             {
                 "title_one": "title one",
-                "title_two": "title two",
+                "title_two": "Master",
                 "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab mollitia voluptate sequi in odit placeat quasi hic cupiditate reprehenderit voluptatum!",
-                "price": 600
+                "price": 600,
+                "id":2
             },
             {
                 "title_one": "title one",
-                "title_two": "title two",
+                "title_two": "Power",
                 "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab mollitia voluptate sequi in odit placeat quasi hic cupiditate reprehenderit voluptatum!",
-                "price": 1000
+                "price": 1000,
+                "id":3
             }
         ]
     },

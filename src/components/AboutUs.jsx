@@ -13,10 +13,10 @@ function AboutUs() {
         <img src={PhotoAbout} alt="test" />
       </div>
       <div className="box_2 box">
-        <div className="title_about">
+        {/* <div className="title_about">
           <span></span>
           <h2>{t('about.about')}</h2>
-        </div>
+        </div> */}
         <h3 dangerouslySetInnerHTML={{ __html: t('about.about title h3') }}></h3>
         <p>
           {

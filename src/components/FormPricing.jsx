@@ -3,6 +3,7 @@ import React, { useEffect, useState } from "react";
 import "./../scss/form_pricing.scss";
 import { useTranslation } from "react-i18next";
 import config from "../config";
+import { motion , AnimatePresence } from "framer-motion";
 
 function FormPricing({ planId, handlPlan }) {
     const [plan, setPlan] = useState(null);
@@ -17,8 +18,6 @@ function FormPricing({ planId, handlPlan }) {
         year: "",
     });
 
-   
-
     const { t } = useTranslation();
     const { currency } = config;
 
@@ -31,9 +30,17 @@ function FormPricing({ planId, handlPlan }) {
     }, []);
 
     return (
+        
         plan !== null && (
+            
             <div className="form_pricing">
-                <div className="form_input">
+                
+                <motion.div
+                    className="form_input"
+                    initial={{ x: -700,opacity:0 }}
+                    animate={{ x: 0 ,opacity:1}}
+                    transition={{duration:0.3}}
+                >
                     <button className="close" onClick={() => handlPlan(null)}>
                         <i className="material-symbols-outlined">close</i>
                     </button>
@@ -52,6 +59,7 @@ function FormPricing({ planId, handlPlan }) {
                                 name="name"
                                 id="name"
                                 placeholder="first name"
+                                autoComplete="off"
                             />
                         </div>
                         <div className="box">
@@ -67,6 +75,7 @@ function FormPricing({ planId, handlPlan }) {
                                 name="l_name"
                                 id="name"
                                 placeholder="last name"
+                                autoComplete="off"
                             />
                         </div>
                         <div className="box box_phone">
@@ -82,6 +91,7 @@ function FormPricing({ planId, handlPlan }) {
                                 name="phone"
                                 id="phone"
                                 placeholder="phone"
+                                autoComplete="off"
                             />
                         </div>
                         <div className="box box_email">
@@ -97,13 +107,14 @@ function FormPricing({ planId, handlPlan }) {
                                 name="email"
                                 id="email"
                                 placeholder="email"
+                                autoComplete="off"
                             />
                         </div>
-                        <div className="box">
+                        <div className="box box_date">
                             <label>
                                 {" "}
                                 <i className="material-symbols-outlined">
-                                    person
+                                calendar_month
                                 </i>{" "}
                                 Date of Birth
                             </label>
@@ -113,30 +124,34 @@ function FormPricing({ planId, handlPlan }) {
                                     name="day"
                                     id="input_day"
                                     placeholder="day"
+                                    autoComplete="off"
                                 />
                                 <input
                                     type="number"
                                     name="month"
                                     id="input_month"
                                     placeholder="month"
+                                    autoComplete="off"
                                 />
                                 <input
                                     type="number"
                                     name="year"
                                     id="input_year"
                                     placeholder="year"
+                                    autoComplete="off"
                                 />
                             </div>
                         </div>
-                        
 
                         <div className="box box_submit">
-                           <button type="submit">send</button>
-                           <button type="reset">reset</button>
+                            <button type="submit">subscribe now</button>
+                            <button type="reset">reset</button>
                         </div>
                     </form>
-                </div>
+                </motion.div>
+                
             </div>
+           
         )
     );
 }

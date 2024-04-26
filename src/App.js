@@ -28,6 +28,8 @@ function App() {
     const [dir, setDir] = useState(i18n.language);
 
     useEffect(() => {
+
+        console.log(i18n.language)
         
         setLoad(true);
         setTimeout(() => {
@@ -44,7 +46,7 @@ function App() {
         <div className={dir === "ar" ? "App rtl" : "App"}>
             {load && <LoadingComponent />}
             <Cover />
-            <Spacing />
+            <Spacing h={140} />
             <AboutUs />
             <Spacing />
             <Title info={t("services.title", { returnObjects: true })} />

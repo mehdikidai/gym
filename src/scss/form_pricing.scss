@@ -64,9 +64,16 @@
                 }
                 &_email {
                     grid-column: 1/3;
-                    grid-row: 2/3;
+                    //grid-row: 2/3;
                 }
-                
+                &_phone {
+                    grid-column: 1/3;
+                    //grid-row: 2/3;
+                }
+                &_date {
+                    grid-column: 1/3;
+                    //grid-row: 2/3;
+                }
                 &_submit {
                     flex-direction: row-reverse;
                     //background: red;
@@ -100,8 +107,8 @@
                     gap: 6px;
                     text-transform: capitalize;
                     i {
-                        font-size: 18px;
-                        color: rgba($white, 0.7);
+                        font-size: 16px;
+                        color: rgba($white, 0.5);
                     }
                 }
                 input {
@@ -119,7 +126,7 @@
                     //background: red;
                     display: flex;
                     padding: 0;
-                    gap: $gap/2;
+                    gap: $gap;
                     input {
                         width: calc(((100% - $gap) / 3)) !important;
 
@@ -140,24 +147,22 @@
     }
 }
 
-
-@include respond('phone'){
+@include respond("phone") {
     .form_pricing {
         padding-inline: $gap;
-        
+
         .form_input {
             border: none;
             form.plan {
                 display: grid;
                 grid-template-columns: 1fr;
                 gap: 20px;
-                
-                grid-template-rows: repeat(7,min-content) ;
-                
-                .box{
+
+                grid-template-rows: repeat(7, min-content);
+
+                .box {
                     grid-column: 1/2;
                     //background: red;
-        
                 }
             }
         }
@@ -165,7 +170,7 @@
     .form_pricing .form_input h2 {
         padding-block: 40px;
     }
-    .form_pricing .form_input{
+    .form_pricing .form_input {
         height: 90vh;
         max-height: 840px;
         overflow-x: hidden;
@@ -189,5 +194,9 @@
     }
     .form_pricing .form_input form.plan .box_submit button {
         height: 36px;
+    }
+
+    .form_pricing .form_input form.plan .box_submit button {
+        font-size: 12px;
     }
 }

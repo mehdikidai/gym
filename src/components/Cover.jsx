@@ -1,15 +1,16 @@
-import React from "react";
+import React, { useRef } from "react";
 import "../scss/cover.scss";
 import Nav from "./Nav";
 import Facebook from "../icons/Facebook";
 import Twitter from "../icons/Twitter";
 import Iinstagram from "../icons/Iinstagram";
 import { useTranslation } from 'react-i18next';
-import { motion } from "framer-motion";
+
 
 function Cover() {
 
   const { t, i18n } = useTranslation();
+  
 
   const goBottom = () => {
     window.scrollTo({
@@ -20,8 +21,11 @@ function Cover() {
   };
 
   
+
+  
   return (
-    <div className="photo">
+    <div className="photo" id="home">
+      <Nav />
       <div className="social_media">
         <a href="#">
           <Facebook w={22} />
@@ -37,7 +41,7 @@ function Cover() {
         className="container"
         
       >
-        <Nav />
+        
         <h1 dangerouslySetInnerHTML={{ __html: t('cover.cover title h1') }}></h1>
         <p dangerouslySetInnerHTML={{ __html: t('cover.cover title p') }}></p>
         <button className={i18n.language === "ar" ? "btn_cover btn_rtl" : "btn_cover"} onClick={goBottom}>

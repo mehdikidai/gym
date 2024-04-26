@@ -1,8 +1,8 @@
 import React from 'react'
 
-function Spacing() {
+function Spacing({h=80}) {
   return (
-    <div className='spacing'></div>
+    <div className='spacing' style={{height:h}}></div>
   )
 }
 
