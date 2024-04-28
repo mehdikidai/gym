@@ -1,116 +1,141 @@
 @import "./globle";
 .AboutAs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  scroll-margin-top: $margin;
-  @include container();
-  gap: $gap * 2;
-  .box {
-    aspect-ratio: 1;
-    //background: red;
-    &_1 {
-      position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    scroll-margin-top: $margin;
+    @include container();
+    gap: $gap * 2;
+    .box {
+        aspect-ratio: 1;
+        //background: red;
+        &_1 {
+            position: relative;
 
-      img {
-        width: calc(100% - 20px);
-        height: calc(100% - 20px);
-        object-fit: cover;
-        position: absolute;
-        transform-origin: 100% 100%;
-        right: 0;
-        bottom: 0;
-        box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.4), -20px -20px $main;
-        transition: all .3s ease-in-out;
-      }
+            img {
+                width: calc(100% - 20px);
+                height: calc(100% - 20px);
+                object-fit: cover;
+                position: absolute;
+                transform-origin: 100% 100%;
+                right: 0;
+                bottom: 0;
+                box-shadow: -2px -2px 4px rgba(0, 0, 0, 0.4), -20px -20px $main;
+                transition: all 0.3s ease-in-out;
+            }
 
-      img:hover{
-        width: 100%;
-        height: 100%;
-        box-shadow: 0 0 0 rgba(0, 0, 0, 0.4), 0 0 $main;
-      }
+            img:hover {
+                width: 100%;
+                height: 100%;
+                box-shadow: 0 0 0 rgba(0, 0, 0, 0.4), 0 0 $main;
+            }
+        }
+        &_2 {
+            display: flex;
+            flex-direction: column;
+            gap: $gap;
+            .title_about {
+                display: flex;
+                align-items: end;
+                gap: $gap;
+                h2 {
+                    color: $white;
+                    transform: translateY(-4px);
+                    text-transform: uppercase;
+                }
+                span {
+                    width: 40px;
+                    height: 20px;
+                    background: $main;
+                    transform: translateY(-9px);
+                    clip-path: polygon(
+                        0 0,
+                        calc(100% - 20px) 0,
+                        100% 100%,
+                        0 100%
+                    );
+                }
+            }
+            h3 {
+                font-size: 34px;
+                color: $white;
+                text-transform: uppercase;
+                span {
+                    color: $main;
+                }
+            }
+            p {
+                color: $white;
+                line-height: 1.8;
+                font-size: 16px;
+            }
+            ul {
+                display: flex;
+                flex-direction: column;
+                gap: $gap * 0.5;
+                margin-top: 40px;
+                li {
+                    color: rgba($white, 0.6);
+                    display: flex;
+                    align-items: center;
+                    gap: 6px;
+                    font-size: 14px;
+                    i {
+                        color: $green;
+                        font-size: 18px;
+                        transform: translateY(2px);
+                    }
+                }
+            }
+        }
     }
-    &_2 {
-      display: flex;
-      flex-direction: column;
-      gap: $gap;
-      .title_about {
-        display: flex;
-        align-items: end;
-        gap: $gap;
-        h2 {
-          color: $white;
-          transform: translateY(-4px);
-          text-transform: uppercase;
-        }
-        span {
-          width: 40px;
-          height: 20px;
-          background: $main;
-          transform: translateY(-9px);
-          clip-path: polygon(0 0,calc(100% - 20px) 0,100% 100%,0 100%);
-        }
-      }
-      h3 {
-        font-size: 34px;
-        color: $white;
-        text-transform: uppercase;
-        span {
-          color: $main;
-        }
-      }
-      p {
-        color: $white;
-        line-height: 1.8;
-        font-size: 16px;
-      }
-      ul {
-        display: flex;
-        flex-direction: column;
-        gap: $gap * 0.5;
-        margin-top: 40px;
-        li {
-          color: rgba($white, 0.6);
-          display: flex;
-          align-items: center;
-          gap: 6px;
-          font-size: 14px;
-          i {
-            color: $green;
-            font-size: 18px;
-            transform: translateY(2px)
-          }
-        }
-      }
-    }
-  }
 }
 
 @include respond("ipad") {
-  .AboutAs {
-    @include container($gap);
-    gap: $gap;
-  }
-  .AboutAs .box {
-     aspect-ratio: auto; 
-  }
+    .AboutAs {
+        @include container($gap);
+        gap: $gap;
+    }
+    .AboutAs .box {
+        aspect-ratio: auto;
+    }
 }
 
 @include respond("phone") {
-  .AboutAs {
-    display: grid;
-    grid-template-columns: 1fr;
-    width: 100%;
-    max-width: 1200px;
-    padding-inline: 0;
-    margin: 0 auto;
-    gap: 40px;
-    padding-inline: $gap;
-    .box_2 {
-      //background: red;
-      padding-block: $gap;
+    .AboutAs {
+        display: grid;
+        grid-template-columns: 1fr;
+        //display: none;
+        width: 100%;
+        padding-inline: 0;
+        margin: 0 auto;
+        gap: 40px;
+        //background: red;
+        padding-inline: $gap;
+        padding-block: $gap;
+        .box_2 {
+            //background: red;
+            padding-block: $gap;
+            //display: none;
+        }
+        .box {
+            width: 100%;
+            aspect-ratio: 1;
+        }
+        .box_2 {
+            //background: red;
+            padding-block: $gap;
+            width: 80vw;
+            h3 {
+                font-size: 22px;
+            }
+            p {
+                line-height: 1.8;
+                font-size: 14px;
+            }
+            ul {
+                margin-top: $gap;
+            }
+            //display: none;
+        }
     }
-    .box {
-        aspect-ratio: 1;
-    }
-  }
 }

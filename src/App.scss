@@ -70,3 +70,11 @@ body {
         scrollbar-width: thin;
     }
 }
+
+
+button,
+div,
+a,
+li {
+  -webkit-tap-highlight-color: transparent !important;
+}

@@ -63,7 +63,7 @@
             height: 40px;
             padding-inline: $gap / 2;
             background: transparent;
-            border: 1px solid rgba($white, 0.5);
+            border: 1px solid rgba($white, 0.2);
             color: $white;
             font-size: 14px;
             &.error {
@@ -75,7 +75,7 @@
             padding: $gap / 2;
             resize: none;
             background: transparent;
-            border: 1px solid rgba($white, 0.5);
+            border: 1px solid rgba($white, 0.2);
             color: $white;
             height: 100px;
             font-size: 14px;
@@ -98,7 +98,7 @@
             justify-content: center;
           }
           label {
-            color: $white;
+            color: rgba($white, 0.5);
             font-size: 14px;
             display: flex;
             align-items: center;

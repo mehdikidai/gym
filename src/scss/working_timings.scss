@@ -1,75 +1,78 @@
 @import "./globle";
 .working_timings {
-  @include container();
-  height: auto;
-  //background: red;
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: $gap;
+    @include container();
+    height: auto;
+    //background: red;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: $gap;
 
-  .table_timings {
-    grid-column: 1/4;
-    background: $black;
+    .table_timings {
+        grid-column: 1/4;
+        background: $black;
 
-    table,
-    td,
-    th {
-      border: 1px solid transparent;
-      height: 44px;
-      color: $white;
-      font-size: 14px;
-    }
-
-    table {
-      border-collapse: collapse;
-      width: 100%;
-
-      thead{
-        display: none;
-      }
-
-      td {
-        padding-inline: $gap;
-      }
-      
-      tr:nth-child(even) {
-        background-color: $black;
-      }
-      tr:nth-child(odd) {
-        background-color: lighten($black, 2%);
-      }
-
-      tr{
-        td:nth-child(1){
-            //border-right: 1px solid rgba($white, 0.2);
-            width: 50% !important;
-            
+        table,
+        td,
+        th {
+            border: 1px solid transparent;
+            height: 44px;
+            color: $white;
+            font-size: 14px;
         }
-        box-shadow: inset 4px 0 rgba($white, 0);
-        &.active{
 
-            //box-shadow: inset 4px 0 $main;
-            
-            td{
-                color: $main !important;
+        table {
+            border-collapse: collapse;
+            width: 100%;
+
+            thead {
+                display: none;
             }
-            
-        }
-      }
 
-      .arrow_right {
-        i {
-          color: rgba($white, 0.2);
-          font-size: 20px;
+            td {
+                padding-inline: $gap;
+            }
+
+            tr:nth-child(even) {
+                background-color: $black;
+            }
+            tr:nth-child(odd) {
+                background-color: lighten($black, 2%);
+            }
+
+            tr {
+                td:nth-child(1) {
+                    //border-right: 1px solid rgba($white, 0.2);
+                    width: 50% !important;
+                }
+                box-shadow: inset 4px 0 rgba($white, 0);
+                &.active {
+                    //box-shadow: inset 4px 0 $main;
+
+                    td {
+                        color: $main !important;
+                        .icon {
+                            width: 18px;
+                            height: 18px;
+                            transform: translateY(1px);
+                            color: $main !important;
+                        }
+                    }
+                }
+            }
+
+            .icon {
+                width: 18px;
+                height: 18px;
+                transform: translateY(1px);
+                color: rgba($gray, 0.5);
+            }
         }
-      }
     }
-  }
 }
 
 @include respond("phone") {
-  .working_timings {
-    //background: red;
-    @include container($gap);
-  }
+    .working_timings {
+        //background: red;
+        @include container($gap);
+    }
 }

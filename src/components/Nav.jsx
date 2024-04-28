@@ -6,10 +6,11 @@ import Flag from "./Flag";
 import { Link } from "react-scroll";
 
 function Nav() {
-
     const { t, i18n } = useTranslation();
     const [showList, setShowList] = useState(false);
     const [lang, setLang] = useState(i18n.language);
+    const [showMenu, setShowMenu] = useState(false);
+    const [langs, setLangs] = useState([]);
 
     const handleLang = (lang) => {
         setLang(lang);
@@ -18,14 +19,16 @@ function Nav() {
         }, 300);
     };
 
-    const handleShowList = () =>  setShowList((last) => !last);
-    const goToHome = () => window.scrollTo({ top: 0, behavior: 'smooth' });
+    const handleShowList = () => setShowList((last) => !last);
+    const goToHome = () => window.scrollTo({ top: 0, behavior: "smooth" });
 
-    const closeMenu = () => console.log('closeMenu')
+    const closeMenu = () => setShowMenu(false);
 
+    const handleShowMenu = () => setShowMenu((last) => !last);
 
     useEffect(() => {
         i18n.changeLanguage(lang);
+        setLangs(Object.keys(i18n.store.data).filter((el) => el !== lang));
     }, [lang]);
 
     return (
@@ -34,9 +37,15 @@ function Nav() {
                 <button onClick={goToHome}>
                     <img width={120} src={Logo} alt="logo" />
                 </button>
-                <ul className="nav_ul">
+                <ul className={showMenu ? "nav_ul  nav_ul_active" : "nav_ul"}>
                     <li>
-                        <Link  to={t("navbar.HOME.id")} spy={true} smooth={true} duration={40} onClick={closeMenu}>
+                        <Link
+                            to={t("navbar.HOME.id")}
+                            spy={true}
+                            smooth={true}
+                            duration={40}
+                            onClick={closeMenu}
+                        >
                             <span></span>
                             {t("navbar.HOME.name")}
                         </Link>
@@ -47,7 +56,7 @@ function Nav() {
                             spy={true}
                             smooth={true}
                             offset={-140}
-                            duration={40} 
+                            duration={40}
                             onClick={closeMenu}
                         >
                             <span></span>
@@ -92,26 +101,33 @@ function Nav() {
                             {t("navbar.CONTACT.name")}
                         </Link>
                     </li> */}
-                    <li>
+                    <li className="list_lang">
                         <button className="btn_lang" onClick={handleShowList}>
                             <Flag src={i18n.language} w={22} /> {i18n.language}
                         </button>
                         <div className={showList ? "list list_show" : "list"}>
-                            <button onClick={() => handleLang("ar")}>
-                                <Flag src="ar" w={22} />
-                                ar
-                            </button>
-                            <button onClick={() => handleLang("fr")}>
-                                <Flag src="fr" w={22} />
-                                fr
-                            </button>
-                            <button onClick={() => handleLang("en")}>
-                                <Flag src="en" w={22} />
-                                en
-                            </button>
+                           
+                            {langs.map((lang, i) => {
+                                return (
+                                    <button key={i} onClick={() => handleLang(lang)}>
+                                        <Flag src={lang} w={22} />
+                                        {lang}
+                                    </button>
+                                );
+                            })}
                         </div>
                     </li>
                 </ul>
+                <button
+                    onClick={handleShowMenu}
+                    className={
+                        showMenu ? "btn_menu btn_menu_active" : "btn_menu"
+                    }
+                >
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
             </div>
         </div>
     );

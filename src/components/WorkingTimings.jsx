@@ -3,6 +3,7 @@ import "./../scss/working_timings.scss";
 import { dayOfWeek } from "./../helpers";
 import Config from "./../config";
 import { useTranslation } from "react-i18next";
+import { MynauiArrowLongRight,MynauiArrowLongLeft } from "./../icons/Icon"
 
 function WorkingTimings() {
     const days = useRef();
@@ -25,7 +26,11 @@ function WorkingTimings() {
                     <td>{t("days." + day.name)}</td>
                     <td>{day.entryTime}</td>
                     <td className="arrow_right">
-                        <i className="material-symbols-outlined">{i18n.language === 'ar' ? 'arrow_left_alt' : 'arrow_right_alt'}</i>
+                        
+                        {
+                            i18n.language === 'ar' ?  <MynauiArrowLongLeft className="icon"/> : <MynauiArrowLongRight className="icon"/>
+                        }
+                        
                     </td>
                     <td>{day.exitTime}</td>
                 </tr>

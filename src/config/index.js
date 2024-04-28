@@ -44,8 +44,8 @@ const config = {
       name: "Sunday",
       frenchName: "Dimanche",
       arabicName: "الأحد",
-      entryTime: "",
-      exitTime: "",
+      entryTime: "10:00",
+      exitTime: "17:00",
     },
     {
       name: "Monday",

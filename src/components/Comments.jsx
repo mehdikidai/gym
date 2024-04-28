@@ -1,17 +1,20 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Splide, SplideSlide } from "@splidejs/react-splide";
 import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
 import "@splidejs/react-splide/css";
 import "./../scss/comments.scss";
+import commentsData from "../config/comments.json";
+import { MdiFormatQuoteClose } from "./../icons/Icon";
 
 function Comments() {
+    const [commentsJson, SetCommentsJson] = useState(commentsData);
     const options = {
         type: "loop",
         drag: "free",
         focus: "center",
         perPage: 3,
         direction: "rtl",
-        gap:"40px",
+        gap: "40px",
         autoScroll: {
             speed: 1,
         },
@@ -22,99 +25,30 @@ function Comments() {
         },
     };
 
+    useEffect(() => {
+        console.log(commentsData);
+    }, []);
+
     return (
         <div className="comments">
             <Splide options={options} extensions={{ AutoScroll }}>
-                <SplideSlide>
-                    <div className="comment_box">
-                        <i className="material-symbols-outlined">
-                            format_quote
-                        </i>
-                        <span>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Vero culpa debitis dolor ea voluptas!
-                        </span>
-                        <h3>user</h3>
-                        <div className="avatar">
-                            <img
-                                src="https://mui.com/static/images/avatar/1.jpg"
-                                alt="user"
-                            />
-                        </div>
-                    </div>
-                </SplideSlide>
-                <SplideSlide>
-                    <div className="comment_box">
-                        <i className="material-symbols-outlined">
-                            format_quote
-                        </i>
-                        <span>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Vero culpa debitis dolor ea voluptas!
-                        </span>
-                        <h3>user</h3>
-                        <div className="avatar">
-                            <img
-                                src="https://mui.com/static/images/avatar/1.jpg"
-                                alt="user"
-                            />
-                        </div>
-                    </div>
-                </SplideSlide>
-                <SplideSlide>
-                    <div className="comment_box">
-                        <i className="material-symbols-outlined">
-                            format_quote
-                        </i>
-                        <span>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Vero culpa debitis dolor ea voluptas!
-                        </span>
-                        <h3>user</h3>
-                        <div className="avatar">
-                            <img
-                                src="https://mui.com/static/images/avatar/1.jpg"
-                                alt="user"
-                            />
-                        </div>
-                    </div>
-                </SplideSlide>
-                <SplideSlide>
-                    <div className="comment_box">
-                        <i className="material-symbols-outlined">
-                            format_quote
-                        </i>
-                        <span>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Vero culpa debitis dolor ea voluptas!
-                        </span>
-                        <h3>user</h3>
-                        <div className="avatar">
-                            <img
-                                src="https://mui.com/static/images/avatar/1.jpg"
-                                alt="user"
-                            />
-                        </div>
-                    </div>
-                </SplideSlide>
-                <SplideSlide>
-                    <div className="comment_box">
-                        <i className="material-symbols-outlined">
-                            format_quote
-                        </i>
-                        <span>
-                            Lorem ipsum, dolor sit amet consectetur adipisicing
-                            elit. Vero
-                        </span>
-                        <h3>user</h3>
-                        <div className="avatar">
-                            <img
-                                src="https://mui.com/static/images/avatar/1.jpg"
-                                alt="user"
-                            />
-                        </div>
-                    </div>
-                </SplideSlide>
+                {commentsJson.map((el, i) => {
+                    return (
+                        <SplideSlide key={i}>
+                            <div className="comment_box">
+                                <i>
+                                    <MdiFormatQuoteClose />
+                                </i>
+                                <p>{el.body}</p>
+
+                                <div className="avatar">
+                                    <h3>{el.name}</h3>
+                                    <img src={el.photo} alt="user" />
+                                </div>
+                            </div>
+                        </SplideSlide>
+                    );
+                })}
             </Splide>
         </div>
     );
