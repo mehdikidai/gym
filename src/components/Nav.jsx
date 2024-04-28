@@ -55,7 +55,7 @@ function Nav() {
                             to={t("navbar.ABOUT.id")}
                             spy={true}
                             smooth={true}
-                            offset={-140}
+                            offset={-160}
                             duration={40}
                             onClick={closeMenu}
                         >
