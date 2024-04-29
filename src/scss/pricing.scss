@@ -1,67 +1,78 @@
 @import "./globle";
 .pricing {
-  @include container();
+    @include container();
 
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: $gap * 2;
-  //background: red;
-  .card {
-    background: transparent;
-    height: 500px;
-    background: lighten($black, 2%);
-    display: flex;
-    flex-direction: column;
-    gap: $gap * 1.1;
-    padding: $gap * 2;
-    justify-content: center;
-    align-items: center;
-    clip-path: polygon(50px 0, 100% 0, 100% 100%, 0 100%, 0 50px);
-    .price_title {
-      font-weight: 600;
-      color: $main;
-      font-size: 18px;
-      margin-bottom: $gap * 1.5;
-    }
-    .price {
-      font-weight: 900;
-      color: $white;
-      font-size: 33px;
-      text-transform: uppercase;
-      small{
-        font-size: 14px;
-        font-weight: 400;
-        text-transform: lowercase;
-        color: rgba($white, 0.5);
-      }
-    }
-    .price_title_2 {
-      font-weight: 600;
-      color: $white;
-      font-size: 20px;
-    }
-    p {
-      text-align: center;
-      color: rgba($white, 0.7);
-      flex: 1;
-    }
-    button {
-      @extend %btn;
-      background: $main;
-      text-transform: capitalize;
-      padding: 10px 20px;
-    }
-    .line {
-      @extend %line;
-    }
-  }
-}
-
-@include respond("phone") {
-  .pricing {
-    //background: red;
-    @include container($gap);
-    grid-template-columns: 1fr;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
     gap: $gap;
-  }
+    //background: red;
+    .card {
+        background: transparent;
+        height: 550px;
+        background: lighten($black, 2%);
+        display: flex;
+        flex-direction: column;
+        gap: $gap;
+        padding: $gap * 4 $gap * 2;
+        justify-content: center;
+        align-items: center;
+        clip-path: polygon(50px 0, 100% 0, 100% 100%, 0 100%, 0 50px);
+        .price_title {
+            font-weight: 600;
+            color: $main;
+            font-size: 18px;
+            margin-bottom: $gap * 1.5;
+        }
+        .price {
+            font-weight: 900;
+            color: $white;
+            font-size: 30px;
+            text-transform: uppercase;
+            small {
+                font-size: 14px;
+                font-weight: 400;
+                text-transform: lowercase;
+                color: rgba($white, 0.5);
+            }
+        }
+        .price_title_2 {
+            font-weight: 600;
+            color: $white;
+            font-size: 20px;
+        }
+        p {
+            text-align: center;
+            color: rgba($white, 0.7);
+            //flex: 1;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            line-clamp: 5;
+            -webkit-box-orient: vertical;
+        }
+        button {
+            @extend %btn;
+            background: $main;
+            text-transform: capitalize;
+            padding: 10px 20px;
+            font-size: 14px;
+            margin-top: auto;
+        }
+        .line {
+            @extend %line;
+        }
+    }
+}
+@include respond("ipad_to_desktop") {
+    .pricing {
+        @include container($gap);
+    }
+}
+@include respond("phone") {
+    .pricing {
+        //background: red;
+        @include container($gap);
+        grid-template-columns: 1fr;
+        gap: $gap;
+    }
 }

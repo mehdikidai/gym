@@ -119,6 +119,13 @@
             "id":"contact"
         }
     },
+    "photos": {
+        "title": {
+            "title_h2": "What We Do",
+            "title_h3": "our <span>images</span>",
+            "id": "images"
+        }
+    },
     "Sent successfully":"Sent successfully",
     "Your message failed to send":"Your message failed to send",
     "Mois":"Mois",

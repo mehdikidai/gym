@@ -133,6 +133,9 @@
     
     .imgBluer{
       clip-path: polygon(0 0,100% 0,100% 700px,0 100%);
+      img{
+        object-position: 15% 0%;
+      }
       &::after {
         background: transparent;
       }
@@ -148,7 +151,7 @@
     padding-block: $gap*6;
   }
   .photo .container h1 {
-    font-size: 30px;
+    font-size: 36px;
     text-align: initial;
     transition: all .3s ease-in-out;
   }

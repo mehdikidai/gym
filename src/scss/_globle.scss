@@ -17,6 +17,11 @@
       @content;
     }
   }
+  @if ($breakpoint == "ipad_to_desktop") {
+    @media (min-width: 600px) and (max-width: 1080px) {
+      @content;
+    }
+  }
 }
 
 %btn {
@@ -43,7 +48,7 @@
 
 @mixin container($padding: 0) {
   width: 100%;
-  max-width: 1080px;
+  max-width: 1090px;
   padding-inline: $padding;
   margin: 0 auto;
 }

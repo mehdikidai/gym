@@ -1,34 +1,40 @@
 @import "./globle";
-.footer{
-    background: lighten($black, 2%);
-    .box{
+.footer {
+    background: $black;
+    .box {
         @include container();
         height: 44px;
         display: flex;
         justify-content: space-between;
         align-items: center;
         flex-direction: row-reverse;
-        border-top: 1px solid rgba($white, 0.3);
-        ul{
+        //border-top: 1px solid rgba($white, 0.3);
+        ul {
             display: flex;
             gap: $gap;
-            li{
-                a{
+            li {
+                a {
                     color: rgba($white, 0.7);
                 }
             }
         }
-        span{
+        span {
             color: rgba($white, 0.7);
             font-size: 12px;
         }
     }
 }
 
-@include respond("phone"){
-    .footer{
-        .box{
-            @include container($gap); 
+@include respond("ipad_to_desktop") {
+    .footer {
+        @include container($gap);
+    }
+}
+
+@include respond("phone") {
+    .footer {
+        .box {
+            @include container($gap);
         }
     }
 }

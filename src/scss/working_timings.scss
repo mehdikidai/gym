@@ -70,6 +70,12 @@
     }
 }
 
+@include respond("ipad_to_desktop") {
+    .working_timings  {
+        @include container($gap);
+    }
+}
+
 @include respond("phone") {
     .working_timings {
         //background: red;

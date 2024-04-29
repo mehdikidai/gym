@@ -16,6 +16,9 @@ import {
     WorkingTimings,
     Footer,
     LoadingComponent,
+    Photos,
+    MapHome,
+    Container
 } from "./components";
 
 import { useTranslation } from "react-i18next";
@@ -63,7 +66,17 @@ function App() {
             <Title info={t("comments.title", { returnObjects: true })} />
             <Comments />
             <Spacing />
+            <Title info={t("photos.title", { returnObjects: true })} />
+            <Photos/>
+            <Spacing />
+            <Title info={t("photos.title", { returnObjects: true })} />
+            <Container>
+            <MapHome/>
+            </Container>
+            <Spacing />
             <Contact />
+            
+            
             <Footer />
         </div>
     );

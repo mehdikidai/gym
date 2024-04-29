@@ -7,7 +7,7 @@ import Iinstagram from "../icons/Iinstagram";
 import { useTranslation } from "react-i18next";
 import bkImg from "../images/cover.jpg";
 import bkImgSmall from "../images/cover-small.jpg";
-import { MynauiArrowRight } from "./../icons/Icon"
+import { MynauiArrowRight } from "./../icons/Icon";
 
 function Cover() {
     const { t, i18n } = useTranslation();
@@ -72,9 +72,10 @@ function Cover() {
                 >
                     {t("cover.cover btn")}
                     {/* <i className="material-symbols-outlined">chevron_right</i> */}
-                    <MynauiArrowRight className="icon"/>
+                    <MynauiArrowRight className="icon" />
                 </button>
             </div>
+            
         </div>
     );
 }

@@ -10,3 +10,6 @@ export { default as Video } from "./Video";
 export { default as WorkingTimings } from "./WorkingTimings";
 export { default as Footer } from "./Footer";
 export { default as LoadingComponent } from "./LoadingComponent";
+export { default as Photos } from "./Photos";
+export { default as Container } from "./Container";
+export { default as MapHome } from "./MapHome";

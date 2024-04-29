@@ -5,12 +5,15 @@
 
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    gap: $gap * 2;
+    gap: $gap;
     .card {
         background: transparent;
         height: 420px;
         position: relative;
-        clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%, 0 40px);
+        //clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%, 0 40px);
+        //clip-path: polygon(100% 100%,0% 100%,0% 92px,100% 0%);
+        overflow: hidden;
+        //border-radius: 20px;
         img {
             width: 100%;
             height: 100%;
@@ -23,25 +26,21 @@
         }
         .card_title {
             position: absolute;
-            bottom: 0;
+            bottom: -2px;
             left: 0;
             font-size: 20px;
             color: $white;
-            height: 70px;
-            width: 100%;
+            height: 80px;
+            width: 110%;
+            transform: translateX(-5%);
             display: flex;
-            align-items: start;
+            align-items: end;
             justify-content: center;
-            padding-block: $gap;
-            background: linear-gradient(
-                0deg,
-                rgba(0, 0, 0, 1) 36%,
-                rgba(0, 0, 0, 0.4920168751094187) 100%
-            );
+            padding-block: $gap * 1.5;
             h4 {
                 color: $white;
                 text-transform: uppercase;
-                font-size: 18px;
+                font-size: 16px;
             }
         }
     }
@@ -65,17 +64,17 @@
     }
 
     .service .card .card_title {
-        bottom: $gap;
+        bottom: -1px;
         left: 0;
         font-size: 16px;
         height: 60px;
-        width: calc(100% - (2 * $gap));
+        width: 110%;
         display: flex;
         align-items: start;
         justify-content: center;
         padding-block: 20px;
         //background: #000000a1;
-        margin-inline: $gap;
+        margin-inline: 0;
         background: rgba(0, 0, 0, 0.7);
         backdrop-filter: blur(5px);
         h4{

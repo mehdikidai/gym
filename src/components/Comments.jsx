@@ -14,7 +14,7 @@ function Comments() {
         focus: "center",
         perPage: 3,
         direction: "rtl",
-        gap: "40px",
+        gap: "20px",
         autoScroll: {
             speed: 1,
         },

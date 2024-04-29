@@ -1,0 +1,12 @@
+@import "./globle";
+.Container_box{
+    width: 100vw;
+    max-width: $w;
+    background: transparent;
+    height: auto;
+    margin: 0 auto;
+    overflow: hidden;
+    .map{
+        height: 360px;
+    }
+}

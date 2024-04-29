@@ -4,7 +4,7 @@
     grid-template-columns: 1fr 1fr;
     scroll-margin-top: $margin;
     @include container();
-    gap: $gap * 2;
+    gap: $gap;
     .box {
         aspect-ratio: 1;
         //background: red;

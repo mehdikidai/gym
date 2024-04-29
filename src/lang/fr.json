@@ -1,6 +1,6 @@
 {
     "cover": {
-        "cover title h1": "help for ideal <span>body</span> fitness fr .",
+        "cover title h1": "help for ideal <span>body</span> fitness .",
         "cover title p": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout. The point of using Lorem Ipsum is that it has a more-or-less normal distribution.",
         "cover btn": "click here"
     },
@@ -44,24 +44,24 @@
         "btn_join_new": "join new",
         "data": [
             {
-                "title_one": "title one",
+                "title_one": "one month",
                 "title_two": "Tourist",
                 "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab mollitia voluptate sequi in odit placeat quasi hic cupiditate reprehenderit voluptatum!",
-                "price": 250,
+                "price": 200,
                 "id":1
             },
             {
-                "title_one": "title one",
+                "title_one": "three months",
                 "title_two": "Master",
                 "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab mollitia voluptate sequi in odit placeat quasi hic cupiditate reprehenderit voluptatum!",
-                "price": 600,
+                "price": 450,
                 "id":2
             },
             {
-                "title_one": "title one",
+                "title_one": "year",
                 "title_two": "Power",
                 "body": "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ab mollitia voluptate sequi in odit placeat quasi hic cupiditate reprehenderit voluptatum!",
-                "price": 1000,
+                "price": 1500,
                 "id":3
             }
         ]
@@ -119,6 +119,23 @@
             "id":"contact"
         }
     },
+    "photos": {
+        "title": {
+            "title_h2": "What We Do",
+            "title_h3": "our <span>images</span>",
+            "id": "images"
+        }
+    },
     "Sent successfully":"Sent successfully",
-    "Your message failed to send":"Your message failed to send"
+    "Your message failed to send":"Your message failed to send",
+    "Mois":"Mois",
+    "Day":"Day",
+    "Year":"year",
+    "first name":"first name",
+    "last name":"last name",
+    "Email":"Email",
+    "Phone":"Phone",
+    "Date of Birth":"Date of Birth",
+    "subscribe now":"subscribe now",
+    "Reset":"Reset"
 }
