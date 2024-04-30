@@ -7,7 +7,7 @@ import {
 } from "@vis.gl/react-google-maps";
 
 import Config from "./../config";
-import drapeau from "./../images/pin.png";
+import drapeau from "./../images/logo-map.png";
 
 function MapHome() {
     const [zoom, setZoom] = useState(15);
@@ -40,7 +40,7 @@ function MapHome() {
                         onClick={() => setZoom(2)}
                     >
                         <span className="icon_map">
-                            <img width={45} src={drapeau} alt="l" />​
+                            <img width={33} src={drapeau} alt="l" />​
                         </span>
                     </AdvancedMarker>
                 </Map>

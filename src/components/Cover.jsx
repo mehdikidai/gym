@@ -9,6 +9,7 @@ import bkImg from "../images/cover.jpg";
 import bkImgSmall from "../images/cover-small.jpg";
 import { MynauiArrowRight } from "./../icons/Icon";
 
+
 function Cover() {
     const { t, i18n } = useTranslation();
 

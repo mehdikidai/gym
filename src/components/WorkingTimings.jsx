@@ -3,7 +3,8 @@ import "./../scss/working_timings.scss";
 import { dayOfWeek } from "./../helpers";
 import Config from "./../config";
 import { useTranslation } from "react-i18next";
-import { MynauiArrowLongRight,MynauiArrowLongLeft } from "./../icons/Icon"
+import { MynauiArrowLongRight, MynauiArrowLongLeft } from "./../icons/Icon";
+import { delay, motion } from "framer-motion";
 
 function WorkingTimings() {
     const days = useRef();
@@ -11,6 +12,19 @@ function WorkingTimings() {
     const { daysGym } = Config;
 
     const { t, i18n } = useTranslation();
+
+    const fadeInAnimation = {
+        initial: { y: 100 ,opacity: 0},
+        animate: () => {
+            return {
+                y: 0,
+                opacity: 1,
+                transition: {
+                    delay: 0.02,
+                },
+            };
+        },
+    };
 
     useEffect(() => {
         days.current.querySelectorAll("tr").forEach((element) => {
@@ -22,18 +36,27 @@ function WorkingTimings() {
     const DaysHtml = daysGym.map((day, i) => {
         return (
             day.entryTime !== "" && (
-                <tr data-day={day.name} key={i}>
+                <motion.tr
+                    variants={fadeInAnimation}
+                    initial="initial"
+                    whileInView="animate"
+                    viewport={{
+                        once: true,
+                    }}
+                    data-day={day.name}
+                    key={i}
+                >
                     <td>{t("days." + day.name)}</td>
                     <td>{day.entryTime}</td>
                     <td className="arrow_right">
-                        
-                        {
-                            i18n.language === 'ar' ?  <MynauiArrowLongLeft className="icon"/> : <MynauiArrowLongRight className="icon"/>
-                        }
-                        
+                        {i18n.language === "ar" ? (
+                            <MynauiArrowLongLeft className="icon" />
+                        ) : (
+                            <MynauiArrowLongRight className="icon" />
+                        )}
                     </td>
                     <td>{day.exitTime}</td>
-                </tr>
+                </motion.tr>
             )
         );
     });

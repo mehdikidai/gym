@@ -53,6 +53,10 @@
   margin: 0 auto;
 }
 
+@mixin round($r){
+  clip-path: inset(0 0 0 round $r);
+}
+
 %title {
   h2 {
     font-size: 18px;

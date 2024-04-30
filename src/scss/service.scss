@@ -13,6 +13,7 @@
         //clip-path: polygon(40px 0, 100% 0, 100% 100%, 0 100%, 0 40px);
         //clip-path: polygon(100% 100%,0% 100%,0% 92px,100% 0%);
         overflow: hidden;
+        @include round(12px);
         //border-radius: 20px;
         img {
             width: 100%;

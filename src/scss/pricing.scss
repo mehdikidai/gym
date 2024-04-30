@@ -16,7 +16,8 @@
         padding: $gap * 4 $gap * 2;
         justify-content: center;
         align-items: center;
-        clip-path: polygon(50px 0, 100% 0, 100% 100%, 0 100%, 0 50px);
+        //clip-path: polygon(50px 0, 100% 0, 100% 100%, 0 100%, 0 50px);
+        @include round(12px);
         .price_title {
             font-weight: 600;
             color: $main;
@@ -57,6 +58,7 @@
             padding: 10px 20px;
             font-size: 14px;
             margin-top: auto;
+            @include round(4px);
         }
         .line {
             @extend %line;
