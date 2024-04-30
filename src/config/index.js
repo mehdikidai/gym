@@ -10,7 +10,7 @@ const config = {
     youtube: "https://www.youtube.com/watch?v=WWn4lfNQy2s",
   },
 
-  location:{ lat: 34.25963055500503, lng: -6.58457420656757 },
+  location:{ lat: 34.24907283623841, lng: -6.608490190724286 }, // 34.24907283623841, -6.608490190724286
 
   prices: [
     {

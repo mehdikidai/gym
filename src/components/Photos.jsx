@@ -64,8 +64,9 @@ function Photos() {
                     {imageList.map((el, i) => {
                         return (
                             <SplideSlide className="box_img" key={i}>
-                                <img src={el} alt="Image 1" />
+                                <img src={el} alt="Image 1"  />
                                 <button
+                                    
                                     className="show_img"
                                     onClick={() => setImgActive(el)}
                                 >
